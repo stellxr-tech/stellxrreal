@@ -130,7 +130,7 @@ footer {
         @media (max-width: 768px) {
             /* Adjust the position of the image on mobile view */
             .parallax2-image {
-                top: -.1%; /* Move it up a bit on mobile devices */
+                top: -5%; /* Move it up a bit on mobile devices */
             }
         }
 
@@ -241,6 +241,75 @@ p.text {
     height: auto;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parallax4-container {
+            position: relative;
+            height: 100vh;
+            background-image: url('https://images.pexels.com/photos/586056/pexels-photo-586056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax4-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
+        }
+
+        .parallax4-text {
+            position: absolute;
+            top: 50%; /* Center vertically */
+            left: 20px; /* Align to the left */
+            transform: translateY(-50%); /* Center text vertically */
+            color: #fff; /* Change text color for the second parallax */
+            font-size: 20px; /* Change font size for the second parallax */
+            max-width: 80%; /* Limit the maximum width of the text */
+        }
+
+        .parallax4-text p {
+            text-align: left; /* Align the text to the left */
+        }
+
+        .parallax4-image {
+    position: absolute;
+    right: 20px; /* Align to the right */
+    max-width: 30%; /* Limit the maximum width of the image to 30% */
+    top: 140px; /* Move it up a bit on mobile devices */
+}
+
+
+        @media (max-width: 768px) {
+            /* Adjust the position of the image on mobile view */
+            .parallax4-image {
+                top: -.1%; /* Move it up a bit on mobile devices */
+            }
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -296,11 +365,44 @@ p.text {
         </div>
     </div>
 
+
+    <div class="parallax4-container">
+        <div class="parallax4-text">
+            <img src="logo.png" alt="Second Logo" class="img-fluid" style="max-width: 100px;">
+<h1 class="mt-3" style="text-align: justify; max-width: 80%;">STAREVENT</h1>
+            <p class="mt-3" style="max-width: 80%;">
+               OUR OFFICIAL EVENT HELD ON 14.10.23  MORE DETAILS COMMING SOON....
+            </p>
+            <a href="#" class="btn btn-primary btn-lg" style="background-color: transparent; color: #fff; border: 2px solid #fff;">Learn More</a>
+            
+        </div>
+
+
+        
+        
+        <!-- Large image on the right side of the second parallax section -->
+        <img src="logo.png" alt="Large Image" class="parallax2-image">
+    </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
      <div class="parallax2-container">
         <div class="parallax2-text">
             <img src="logo.png" alt="Second Logo" class="img-fluid" style="max-width: 100px;">
-<h1 class="mt-3" style="text-align: justify; max-width: 80%;">PIXELOUTFITTER</h1>
-            <p class="mt-3" style="text-align: justify; max-width: 80%;">
+<h1 class="mt-3" style=" max-width: 80%;">PIXELOUTFITTER</h1>
+            <p class="mt-3" style=" max-width: 80%;">
                 "Do you have a vision you want to bring to life? Look no further. We specialize in crafting premium posters, logos, websites, apps, games, animations, and more, all at a remarkably low cost, and sometimes even for free. Elevate your product with our creative expertise. Contact us today and let's turn your ideas into reality."
             </p>
             <a href="#" class="btn btn-primary btn-lg" style="background-color: transparent; color: #fff; border: 2px solid #fff;">Learn More</a>
@@ -319,29 +421,13 @@ p.text {
 
 
 
-    <div class="parallax3-container">
-        <div class="parallax3-text">
-            <img src="logo.png" alt="Second Logo" class="img-fluid" style="max-width: 100px;">
-            <h1 class="mt-3" style="text-align: justify; max-width: 80%;">ASHAN</h1>
-
-            <p class="mt-3" style="text-align: justify; max-width: 80%;">
-                Aashan is an education blog/platform that offers high-quality study materials completely free of charge. With a strong focus on helping students excel in exams and competitions, Aashan provides comprehensive resources to ensure high scores and academic success. Beyond study materials, Aashan also offers weekly quizzes and quiz questions, allowing students to assess their knowledge and track their progress.
-            </p>
-            <a href="#" class="btn btn-primary btn-lg" style="background-color: transparent; color: #fff; border: 2px solid #fff;">Learn More</a>
-            
-        </div>
 
 
         
         
         <!-- Large image on the right side of the second parallax section -->
-       <br><br> <img src="11.jpeg" alt="Large Image" class="parallax3-image">
-    </div>
-    
-    </div>
-
-    <br><footer>
-        <div class="footer-content">
+  <br><br><footer>
+        <d  iv class="footer-content">
             <p>&copy; 2023 Stellxr. Unauthorized duplication, copying, and giggles are highly encouraged! lol</p>
         </div>
     </footer>

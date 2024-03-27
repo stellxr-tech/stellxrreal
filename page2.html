@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Video</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@700&family=PT+Serif:ital@1&family=Press+Start+2P&family=Schoolbell&display=swap" rel="stylesheet">  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    margin-top: 10vh; /* Adjust the margin to push the video down */
+  }
+
+  .video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .content-section {
+    text-align: center;
+    padding: 50px 15px; /* Updated padding */
+  }
+
+  .content-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content-text {
+    margin-top: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px; /* Limiting the max width */
+    margin: 0 auto; /* Center align the text */
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .video-container {
+      margin-top: 20vh; /* Adjust the margin to push the video down more on smaller screens */
+    }
+
+    .content-section h2 {
+      font-size: 1.5em;
+    }
+
+    .content-text {
+      font-size: 1em;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .video-container {
+      margin-top: 20vh; /* Adjust the margin to push the video down more on smaller screens */
+    }
+    
+    .video-text {
+      font-size: 2em;
+    }
+  }
+
+  .navbar22343 {
+    background-color: #343a40; /* Dark background color */
+    padding: 15px 0;
+    border-bottom: 4px solid #ff6347; /* Bottom border color */
+  }
+
+  .navbar22343 .navbar-brand {
+    color: #ffffff; /* Brand text color */
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .navbar22343 .navbar-nav .nav-link {
+    color: #ffffff; /* Nav links color */
+    font-size: 14px;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar22343 .navbar-nav .nav-link:hover {
+    color: #007bff; /* Hover color */
+  }
+
+  .navbar22343 .form-inline .form-control {
+    width: 200px; /* Search bar width */
+    border-radius: 20px; /* Search bar border radius */
+  }
+
+  .navbar22343 .form-inline .btn {
+    border-radius: 20px; /* Search button border radius */
+    margin-left: 10px;
+  }
+
+  /* Custom Navbar Styles */
+  .navbar22343 {
+    background-color: #000000; /* Dark background color */
+    padding: 15px 0;
+    border-bottom: 4px solid #000000; /* Bottom border color */
+  }
+
+  .navbar22343 .navbar-brand {
+    color: #ffffff; /* Brand text color */
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .navbar22343 .navbar-toggler-icon {
+    color: #ffffff; /* Hamburger icon color */
+  }
+
+  .navbar22343 .navbar-nav .nav-link {
+    color: #ffffff; /* Nav links color */
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+  }
+
+  .navbar22343 .navbar-nav .nav-link:hover {
+    color: #007bff; /* Hover color */
+  }
+
+  .navbar22343 .form-inline .form-control {
+    width: 250px; /* Search bar width */
+    border-radius: 25px; /* Search bar border radius */
+  }
+
+  .navbar22343 .form-inline .btn {
+    border-radius: 25px; /* Search button border radius */
+    margin-left: 10px;
+  }
+
+  /* Overriding Bootstrap default styles for hamburger icon */
+  .navbar22343 .navbar-toggler {
+    border-color: #ffffff;
+  }
+
+  .navbar22343 .navbar-toggler-icon {
+    background-color: #ffffff;
+  }
+
+  .top-bar {
+    background-color: #343a40; /* Dark background color */
+    padding: 10px 0;
+    border-bottom: 4px solid #000000; /* Bottom border color */
+  }
+
+  .top-bar .navbar-brand {
+    color: #ffffff; /* Brand text color */
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .top-bar .contact-info {
+    color: #ffffff; /* Contact info text color */
+    font-size: 14px;
+    margin-right: 15px;
+  }
+
+  .top-bar .navbar-nav .nav-link {
+    color: #ffffff; /* Nav links color */
+    font-size: 14px;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+  }
+
+  .top-bar .navbar-nav .nav-link:hover {
+    color: #007bff; /* Hover color */
+  }
+
+  .top-bar .form-inline .form-control {
+    width: 200px; /* Search bar width */
+    border-radius: 20px; /* Search bar border radius */
+  }
+
+  .top-bar .form-inline .btn {
+    border-radius: 20px; /* Search button border radius */
+    margin-left: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    margin-top: 10vh; /* Adjust the margin to push the video down */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+.image-container111 {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.image-container111 img {
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.text-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar22343" style="position: fixed; width: 100%; z-index: 100; top: 0;">
+        <div class="container">
+            <a class="navbar-brand" href="#">Stellxr</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i
+                            class="fas fa-search"></i>submit</button>
+                </form>
+            </div>
+        </div>
+        
+    </nav> 
+<div class="video-container">
+  <video autoplay muted loop>
+    <source src="website website (3).mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+</div>
+<div class="video-container">
+    <video autoplay muted loop>
+      <source src="Copy of Copy of website website (1).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+  </div>
+  
+
+  
+<div class="video-container">
+    <video autoplay muted loop>
+      <source src="Copy of website website.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="btn-container">
+      <a href="#" class="btn btn-secondary">Click Me</a>
+    </div>
+  </div>
+
+
+
+  <br><br><div class="image-container111">
+    <img src="Affordable.png" alt="Responsive Image">
+  </div>
+  <div class="text-container">
+    
+    <p>
+
+
+
+        Design shouldn't break the bank! We believe in creating beautiful and functional websites that are accessible to everyone.  Our affordable designs utilize clever solutions and strategic resource allocation to deliver impactful visuals without sacrificing quality. You'll get a professional website that reflects your brand's unique personality, all within a budget that works for you.</p>
+    <a href="#" class="btn btn-secondary">Learn More</a>
+  </div>
+  
+  <div class="content-section">
+    <h2>Responcive Design</h2>
+    <div class="image-container">
+      <img src="cam (1).png" alt="Image 1">
+      <img src="cam (2).png" alt="Image 2">
+      <img src="cam (3).png" alt="Image 3" >
+    </div>
+    <div class="content-text">
+  
+In today's digital world, users access websites from a variety of devices, from desktops and laptops to tablets and smartphones. Responsive web design ensures your website delivers an optimal viewing experience across all screen sizes. Our responsive designs seamlessly adjust content, images, and navigation to fit any device, guaranteeing a smooth and user-friendly experience for your visitors, no matter how they choose to interact with your website.  
+<br><br><a href="#" class="btn">Learn More</a>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--js script-->
+  <script src="main.js"></script>
+  </body>
+  </html>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $('.carousel').carousel({
+      interval: 2000, // Change slide every 2 seconds (2000 milliseconds)
+      pause: 'hover' // Pause on hover
+    });
+  
+  
+  
+  
+  
+  
+  
+    document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links ul');
+  
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  });
+  
+  </script>
+  
+</body>
+</html>

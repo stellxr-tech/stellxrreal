@@ -1,249 +1,308 @@
-@font-face {
-    font-family: 'Metropolis-Light'; /* Use 'Metropolis-Light' or any name you prefer */
-    src: url('Metropolis-Light.otf') format('truetype'); /* Specify the font file location and format */
-}
+.carousel-inner img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+  }
 
-body {
-    font-family: 'Metropolis-Light', sans-serif; /* Use the 'Metropolis-Light' font in your CSS */
-}
+  @media (max-width: 767px) {
+    .carousel-inner img {
+      height: 250px; /* Reduced height for mobile devices */
+    }
+  }
 
-/* Additional CSS styling here */
-
-
-
-
-.space-hover-btn {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.space-hover-btn:hover {
-    background-color: #fff; /* Change to the desired hover background color */
-    color: #000; /* Change to the desired hover text color */
-    border-color: #000; /* Change to the desired hover border color */
-    transform: scale(1.05); /* Optional: Add a subtle scale effect on hover */
-}
-
-
-
-
-p {
-    font-family:'Metropolis-Light', sans-serif;
-}
-footer {
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.footer-content {
-    font-size: 14px;
-}
-
-        /* Styling for the parallax container with the class "parallax1-container" */
-        .parallax1-container {
-            position: relative;
-            height: 100vh;
-            background-image: url('https://cdn.pixabay.com/photo/2011/12/13/14/30/earth-11014_1280.jpg');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        /* Styling for the black shade overlay */
-        .parallax1-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7); /* Black with 50% transparency */
-        }
-
-        /* Styling for the text on top of the parallax */
-        .parallax-text {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #fff;
-            font-size: 24px;
-        }
-
-        /* Styling for the logo image to make it responsive */
-        .parallax-text img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Specific styles for the second parallax section */
-        .parallax2-container {
-            position: relative;
-            height: 100vh;
-            background-image: url('https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&q=80&w=2072&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .parallax2-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
-        }
-
-        .parallax2-text {
-            position: absolute;
-            top: 50%; /* Center vertically */
-            left: 20px; /* Align to the left */
-            transform: translateY(-50%); /* Center text vertically */
-            color: #fff; /* Change text color for the second parallax */
-            font-size: 20px; /* Change font size for the second parallax */
-            max-width: 80%; /* Limit the maximum width of the text */
-        }
-
-        .parallax2-text p {
-            text-align: left; /* Align the text to the left */
-        }
-
-        .parallax2-image {
-            position: absolute;
-            right: 20px; /* Align to the right */
-            max-width: 40%; /* Limit the maximum width of the image */
-            height: auto;
-            top:140px; /* Move it up a bit on mobile devices */
-        }
-
-        @media (max-width: 768px) {
-            /* Adjust the position of the image on mobile view */
-            .parallax2-image {
-                top: -5%; /* Move it up a bit on mobile devices */
-            }
-        }
-
-
-body{background-color: #000000;}
-html {
-    scroll-behavior: smooth;
-}
-
-body{background-color:  #000000;}
-
-
-
-
-        .parallax3-container {
-            position: relative;
-            height: 100vh;
-            background-image: url('https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .parallax3-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
-        }
-
-        .parallax3-text {
-            position: absolute;
-            top: 50%; /* Center vertically */
-            left: 20px; /* Align to the left */
-            transform: translateY(-50%); /* Center text vertically */
-            color: #fff; /* Change text color for the second parallax */
-            font-size: 20px; /* Change font size for the second parallax */
-            max-width: 80%; /* Limit the maximum width of the text */
-        }
-
-        .parallax3-text p {
-            text-align: left; /* Align the text to the left */
-        }
-
-        .parallax3-image {
+  .carousel-caption {
     position: absolute;
-    right: 20px; /* Align to the right */
-    max-width: 30%; /* Limit the maximum width of the image to 30% */
-    top: 140px; /* Move it up a bit on mobile devices */
-}
-
-
-        @media (max-width: 768px) {
-            /* Adjust the position of the image on mobile view */
-            .parallax3-image {
-                top: -.1%; /* Move it up a bit on mobile devices */
-            }
-        }
-
-
-
-
-
-
-
-
-
-        .container.about-class {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.image-container {
+    top: 50%;
+    left: 0;
+    right: 0;
     text-align: center;
-}
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    z-index: 1;
+  }
 
-img.responsive-img {
-    max-width: 100%;
-    height: auto;
-    width: auto\9; /* IE8 support */
-}
-
-h1.heading {
-    text-align: center;
-}
-
-p.text {
-    text-align: center;
-}
-
-
-
-
-#preloader {
-    position: fixed;
+  .overlay {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff; /* Background color for the preloader overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Ensure the preloader is above all other elements */
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay */
+    z-index: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  *,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 10px;
+  font-family: 'SF Pro Display',sans-serif;
+}
+a{
+  display: block;
+  text-decoration: none;
+}
+.container{
+  max-width: 98rem;
+  margin: 0 auto;
+  padding: 0 2.2rem;
+}
+/*header*/
+header{
+  position: fixed;
+  top:0;
+  z-index: 1400;
+  width: 100%;
+  height: 4.4rem;
+  background-color: rgba(0,0,0,.8);
+  backdrop-filter: blur(2rem);
 }
 
-#status img {
-    max-width: 100%;
-    height: auto;
+/*iphone 11 pro section */
+.iphone-11-pro{
+  background: url("Untitled\ design\ \(2\).png");
+  margin-top: 4.4rem;
+
+}
+
+.title{
+  color:#fff;
+  text-align: center;
+  padding-top: 5.5rem;
+}
+
+.title-heading{
+  font-size: 5.6rem;
+  line-height: 1.07143;
+  letter-spacing: -.005rem;
+}
+.title-sub-heading{
+  font-size: 2.65rem;
+  margin-top: .6rem;
+  letter-spacing: .008rem;
+  font-weight: 400;
+}
+.title-price{
+  font-size: 1.7rem;
+  color: #888;
+  margin-top: .68rem;
+}
+.cta{
+  text-align: center;
+  margin-top: 1.8rem;
+}
+.cta-link{
+  color: #66bbff;
+  font-size: 2.1rem;
+  display: inline-block;
+}
+.cta-link:nth-child(2){
+  margin-left: 2.6rem;
+}
+.cta-link:hover{
+  border-bottom:2px solid #66bbff;
+}
+/*iphone 11 section */
+.iphone-11{
+  background: url("123.png");
+}
+.title-dark{
+  color:#000;
+}
+.cta-link-darker{
+  color:#0070c9;
+}
+.cta-link-darker:hover{
+  border-bottom-color:#0070c9;
+}
+.watch{
+  background: url("https://i.postimg.cc/gJ5CR0Mg/watch-large.jpg");
+}
+.title-heading-watch{
+  height: 7.8rem;
+  background: url("https://i.postimg.cc/LXfTC69C/logo-watch-large.png") center no-repeat;
+  background-size: auto 7.8rem;
+  margin-top: 1.6rem;
+}
+
+/*moved to the bottom of all section styles to keep consistent styles*/
+
+.hero{
+  height: 69.2rem;
+  background-size: auto 73.6rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: .6rem solid #fff;
+  border-bottom: .6rem solid #fff;
+}
+
+
+.iphone-11-pro{
+  border-top: none;
+}
+/*end*/
+@media screen and (max-width:1068px){
+  .iphone-11-pro{
+      background: url("123.png");
+  }
+  .iphone-11{
+      background: url("Modern\ app\ user\ interface\ laptop\ mock\ instagram\ post\ \(portrait\)\ \(1450\ x\ 1080\ px\)\ \(1\).png");
+  }
+  .watch{
+      background: url("Pink\ and\ Purple\ Illustrative\ Gaming\ Streaming\ Banner\ \(4\).png");
+  }
+  .hero{
+      height: 65rem;
+      background-size: auto 69.8rem;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+  }
+  .title-heading{
+      font-size: 4.4rem;
+  }
+  .title-sub-heading{
+      font-size: 2.4rem;
+  }
+  .cta-link:nth-child(2){
+      margin-left: 2rem;
+  }
+  .title-heading-watch{
+      height: 6.2rem;
+      background: url("https://i.postimg.cc/Zqs2tRhJ/logo-watch-medium.png") center no-repeat;
+      background-size: auto 6.2rem;
+  }
+}
+
+@media screen and (max-width:767px){
+  header{
+      height: 4.8rem;
+      transition: background .36s cubic-bezier(0.23,0.08,0.24,1),
+      height .56s cubic-bezier(0.23,0.08,0.24,1);
+  }
+  header .container{
+      padding: 0;
+  }
+  .iphone-11-pro{
+      margin-top: 4.8rem;
+  }
+
+
+  .line{
+      position: absolute;
+      width: 1.7rem;
+      height: 1px;
+      background-color: #fff;
+      transition: margin-top .3192s cubic-bezier(0.04,0.04,0.12,0.96);
+  }
+  .line-top{
+      margin-top:3px;
+  }
+  .line-bottom{
+      margin-top:-.4rem
+  }
+  .active .line-top{
+      margin-top:0;
+      transform: rotate(45deg);
+      transition: transform .3192s .1s cubic-bezier(0.04,0.04,0.12,0.96) ;
+  }
+  .active .line-bottom{
+      margin-top:0;
+      transform: rotate(-45deg);
+      transition: transform .3192s .1s cubic-bezier(0.04,0.04,0.12,0.96) ;
+  }
+  header .active{
+      height: 100%;
+      background-color: #000;
+  }
+
+  @keyframes fadeIn{
+      from{
+          opacity:0;
+      }
+      to{
+          opacity: 1;
+      }
+  }
+  
+}
+@media screen and (max-width:735px){
+  .iphone-11-pro{
+      background: url("1\ \(1\).png");
+  }
+  .iphone-11{
+      background: url("Untitled\ design\ \(6\).png");
+  }
+  .watch{
+      background: url("Pink\ and\ Purple\ Illustrative\ Gaming\ Streaming\ Banner\ \(4\).png");
+  }
+  .hero{
+      height: 50rem;
+      background-size: auto 54.8rem;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+  }
+  .title{
+      padding: 3.7rem;
+  }
+  .title-heading{
+      font-size: 3.2rem;
+  }
+  .title-sub-heading{
+      font-size: 1.9rem;
+  }
+  .title-heading-watch{
+      margin-top: -.5rem;
+      margin-bottom: 0;
+  }
+  .title-price{
+      font-size: 1.4rem;
+  }
+  .cta{
+      margin-top: .7rem;
+  }
+  .cta-link{
+      font-size: 1.9rem;
+  }
+}
+.carousel-caption h5,
+.carousel-caption p {
+  font-size: 2rem; /* Adjust the font size as needed */
 }
 
 
@@ -264,51 +323,291 @@ p.text {
 
 
 
-.parallax4-container {
-            position: relative;
-            height: 100vh;
-            background-image: url('https://images.pexels.com/photos/586056/pexels-photo-586056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
 
-        .parallax4-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
-        }
 
-        .parallax4-text {
-            position: absolute;
-            top: 50%; /* Center vertically */
-            left: 20px; /* Align to the left */
-            transform: translateY(-50%); /* Center text vertically */
-            color: #fff; /* Change text color for the second parallax */
-            font-size: 20px; /* Change font size for the second parallax */
-            max-width: 80%; /* Limit the maximum width of the text */
-        }
 
-        .parallax4-text p {
-            text-align: left; /* Align the text to the left */
-        }
+  .header {
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Prevent video overflow */
+}
 
-        .parallax4-image {
+/* Set the dimensions and position of the video element */
+.header video {
     position: absolute;
-    right: 20px; /* Align to the right */
-    max-width: 30%; /* Limit the maximum width of the image to 30% */
-    top: 140px; /* Move it up a bit on mobile devices */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place the video behind other content */
+}
+
+/* Rest of your CSS styles for the header, inner-header, etc. */
+
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
 }
 
 
-        @media (max-width: 768px) {
-            /* Adjust the position of the image on mobile view */
-            .parallax4-image {
-                top: -.1%; /* Move it up a bit on mobile devices */
-            }
-        }
+
+.navbar22343 {
+  background-color: #343a40; /* Dark background color */
+  padding: 15px 0;
+  border-bottom: 4px solid #ff6347; /* Bottom border color */
+}
+
+.navbar22343 .navbar-brand {
+  color: #ffffff; /* Brand text color */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar22343 .navbar-nav .nav-link {
+  color: #ffffff; /* Nav links color */
+  font-size: 14px;
+  margin-left: 15px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar22343 .navbar-nav .nav-link:hover {
+  color: #007bff; /* Hover color */
+}
+
+.navbar22343 .form-inline .form-control {
+  width: 200px; /* Search bar width */
+  border-radius: 20px; /* Search bar border radius */
+}
+
+.navbar22343 .form-inline .btn {
+  border-radius: 20px; /* Search button border radius */
+  margin-left: 10px;
+}
+       /* Custom Navbar Styles */
+       .navbar22343 {
+        background-color: #000000; /* Dark background color */
+        padding: 15px 0;
+        border-bottom: 4px solid #000000; /* Bottom border color */
+    }
+
+    .navbar22343 .navbar-brand {
+        color: #ffffff; /* Brand text color */
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .navbar22343 .navbar-toggler-icon {
+        color: #ffffff; /* Hamburger icon color */
+    }
+
+    .navbar22343 .navbar-nav .nav-link {
+        color: #ffffff; /* Nav links color */
+        font-size: 18px;
+        margin-left: 15px;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .navbar22343 .navbar-nav .nav-link:hover {
+        color: #007bff; /* Hover color */
+    }
+
+    .navbar22343 .form-inline .form-control {
+        width: 250px; /* Search bar width */
+        border-radius: 25px; /* Search bar border radius */
+    }
+
+    .navbar22343 .form-inline .btn {
+        border-radius: 25px; /* Search button border radius */
+        margin-left: 10px;
+    }
+
+    /* Overriding Bootstrap default styles for hamburger icon */
+    .navbar22343 .navbar-toggler {
+        border-color: #ffffff;
+    }
+
+    .navbar22343 .navbar-toggler-icon {
+        background-color: #ffffff;
+    }
+
+    .top-bar {
+      background-color: #343a40; /* Dark background color */
+      padding: 10px 0;
+      border-bottom: 4px solid #000000; /* Bottom border color */
+  }
+
+  .top-bar .navbar-brand {
+      color: #ffffff; /* Brand text color */
+      font-size: 18px;
+      font-weight: bold;
+  }
+
+  .top-bar .contact-info {
+      color: #ffffff; /* Contact info text color */
+      font-size: 14px;
+      margin-right: 15px;
+  }
+
+  .top-bar .navbar-nav .nav-link {
+      color: #ffffff; /* Nav links color */
+      font-size: 14px;
+      margin-left: 15px;
+      margin-right: 15px;
+      transition: color 0.3s ease;
+  }
+
+  .top-bar .navbar-nav .nav-link:hover {
+      color: #007bff; /* Hover color */
+  }
+
+  .top-bar .form-inline .form-control {
+      width: 200px; /* Search bar width */
+      border-radius: 20px; /* Search bar border radius */
+  }
+
+  .top-bar .form-inline .btn {
+      border-radius: 20px; /* Search button border radius */
+      margin-left: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+@import 'https://fonts.googleapis.com/css?family=Poppins:400,500';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Mea Culpa");
+@import url('https://fonts.googleapis.com/css2?family=Dancing Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Beau Rivage&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin Sans&family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Cormorant+Upright&display=swap');
+
+
+
+
+  
+
+
+
+

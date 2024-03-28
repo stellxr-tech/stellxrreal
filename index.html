@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>stellxr</title>
+  <title>Stellxr-2</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@700&family=PT+Serif:ital@1&family=Press+Start+2P&family=Schoolbell&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
   
   </style>
 </head>
+  
 <body>
   <nav class="navbar navbar-expand-lg navbar22343" style="position: fixed; width: 100%; z-index: 100; top: 0;">
     <div class="container">
@@ -53,13 +54,13 @@
 </nav>   <br><br><br><section id="iphone11" class="hero iphone-11">
     <div class="container">
         <div class="title title-dark">
-            <h2 class="title-heading">Pixel Outfitter </h2>
+            <h2 class="title-heading" >Pixel Outfitter </h2>
             <h3 class="title-sub-heading">Turn your ideas into reality</h3>
             <p class="title-price"> with our affordable and dynamic creative services.</p>
         </div>
         <div class="cta">
-            <a href="page2.html" class="cta-link cta-link-darker">learn more</a>
-            <a href="" class="cta-link cta-link-darker">Buy</a>
+            <a href="page2.html" class="cta-link cta-link-darker" id="vibrate-link">learn more</a>
+            <a href="" class="cta-link cta-link-darker" id="vibrate-link">Buy</a>
         </div>
     </div>
 </section>
@@ -72,8 +73,8 @@
                     <p class="title-price">leap into the future with stella ai technolegys</p>
                 </div>
                 <div class="cta">
-                    <a href="" class="cta-link">learn more</a>
-                    <a href="" class="cta-link">Buy</a>
+                    <a href="" class="cta-link" id="vibrate-link">learn more</a>
+                    <a href="" class="cta-link" id="vibrate-link">Buy</a>
                 </div>
             </div>
         </section>
@@ -103,8 +104,8 @@
             <p class="title-price" style="color: aliceblue;">leap into the future with stella ai technolegys</p>
         </div>
         <div class="cta">
-            <a href="" class="cta-link">learn more</a>
-            <a href="" class="cta-link">Buy</a>
+            <a href="" class="cta-link" id="vibrate-link">learn more</a>
+            <a href="" class="cta-link" id="vibrate-link">Buy</a>
         </div>
     </div>
     </div>
@@ -160,6 +161,25 @@
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const vibrateLink = document.getElementById('vibrate-link');
+    
+    vibrateLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Check if the browser supports the vibration API
+        if ("vibrate" in navigator) {
+            // Vibrate for 200 milliseconds
+            navigator.vibrate(200);
+        } else {
+            // Handle unsupported feature
+            alert('Vibration is not supported in your browser.');
+        }
+    });
 });
 
 </script>

@@ -280,7 +280,104 @@
     margin-top: 15px;
 }
 
+
+
+
+
+
+.navbar22343 {
+  background-color: #343a40; /* Dark background color */
+  padding: 15px 0;
+  border-bottom: 4px solid #ff6347; /* Bottom border color */
+}
+
+.navbar22343 .navbar-brand {
+  color: #ffffff; /* Brand text color */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar22343 .navbar-nav .nav-link {
+  color: #ffffff; /* Nav links color */
+  font-size: 14px;
+  margin-left: 15px;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar22343 .navbar-nav .nav-link:hover {
+  color: #007bff; /* Hover color */
+}
+
+.navbar22343 .form-inline .form-control {
+  width: 200px; /* Search bar width */
+  border-radius: 20px; /* Search bar border radius */
+}
+
+.navbar22343 .form-inline .btn {
+  border-radius: 20px; /* Search button border radius */
+  margin-left: 10px;
+}
+       /* Custom Navbar Styles */
+       .navbar22343 {
+        background-color: #302424; /* Dark background color */
+        padding: 15px 0;
+        border-bottom: 4px solid #241717; /* Bottom border color */
+    }
+
+    .navbar22343 .navbar-brand {
+        color: #ffffff; /* Brand text color */
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .navbar22343 .navbar-toggler-icon {
+        color: #ffffff; /* Hamburger icon color */
+    }
+
+    .navbar22343 .navbar-nav .nav-link {
+        color: #ffffff; /* Nav links color */
+        font-size: 18px;
+        margin-left: 15px;
+        margin-right: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .navbar22343 .navbar-nav .nav-link:hover {
+        color: #007bff; /* Hover color */
+    }
+
+    .navbar22343 .form-inline .form-control {
+        width: 250px; /* Search bar width */
+        border-radius: 25px; /* Search bar border radius */
+    }
+
+    .navbar22343 .form-inline .btn {
+        border-radius: 25px; /* Search button border radius */
+        margin-left: 10px;
+    }
+
+    /* Overriding Bootstrap default styles for hamburger icon */
+    .navbar22343 .navbar-toggler {
+        border-color: #ffffff;
+    }
+
+    .navbar22343 .navbar-toggler-icon {
+        background-color: #ffffff;
+    }
+
+    .top-bar {
+      background-color: #343a40; /* Dark background color */
+      padding: 10px 0;
+      border-bottom: 4px solid #000000; /* Bottom border color */
+  }
+
+
+
+
+
     </style>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Responsive Video</title>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -379,10 +476,66 @@
     });
 });
 
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links ul');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+});
+
+
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--js script-->
+    <script src="main.js"></script>
+    </body>
+    </html>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: #000000; color: white;">  <nav class="navbar navbar-expand-lg navbar22343" style="position: fixed; width: 100%; z-index: 100; top: 0;">
+  <div class="container">
+      <a class="navbar-brand" href="#">Stellxr</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
+              <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i
+                      class="fas fa-search"></i>submit</button>
+          </form>
+      </div>
+  </div>
+  
+</nav>
 
     <div class="video-container">
         <video autoplay loop muted playsinline>
@@ -402,11 +555,23 @@
 
 
 
+  <div class="local-video">
+    <video autoplay muted loop playsinline>
+        <source src="noname.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
 
     <div class="image-section">
         <h2>Dynamic Themes</h2>
-        <p style="text-align: justify;">Stellxr takes website personalization to the next level by offering dynamic theme adaptation based on the seasons. Our innovative technology automatically changes the website's theme to reflect the current season, providing a fresh and relevant look throughout the year. Whether it's the vibrant colors of spring, the warm tones of summer, the rich hues of autumn, or the cool shades of winter, our websites adapt to create an immersive and engaging user experience that resonates with visitors. With Stellxr, you can ensure your website remains visually appealing and seasonally appropriate, enhancing user engagement and retention.</p>
-        <img class="responsive-image" src="image1.png" alt="Dynamic Image">
+        <p style="text-align: center; font-size: 20px; line-height: 1.6; color: #ffffff; font-family: 'San Francisco', sans-serif; font-weight: 400; z-index:200;">
+          Stellxr revolutionizes website personalization with dynamic theme adaptation tailored to the seasons. Our state-of-the-art technology fluidly adjusts the website's aesthetics to mirror the current season, ensuring a consistently fresh and relevant visual experience. From the vibrant hues of spring to the sun-kissed shades of summer, the earthy tones of autumn, and the crisp palettes of winter, our websites adapt seamlessly to create an immersive and captivating user journey. Choose Stellxr to maintain a visually enchanting and seasonally relevant website, elevating user engagement and retention.
+      </p>
+      
+      
+      
+        <img class="responsive-image" src="image1.png" alt="Dynamic Image" style="margin-top: -25px; z-index:1;">
        
         <div class="button-container">
             <button>1</button>
@@ -416,28 +581,26 @@
         </div>
     </div>
 
-    <div class="image-section">
+  
+   <br><br><br> <div class="image-section">
         <h2>Why so responcive?</h2>
-        <p>Stellxr ensures that all websites are designed with responsiveness in mind, guaranteeing optimal viewing and interaction experience across a variety of devices and screen sizes. Our commitment to responsiveness means that your website will adapt seamlessly to desktops, tablets, and mobile phones, ensuring a consistent and user-friendly experience for all visitors.</p>
+       
         <div class="image-row">
             <img src="hehehhhe (1).png" alt="Image 2">
             <img src="hehehhhe (2).png" alt="Image 3">
             <img src="hehehhhe (3).png" alt="Image 4">
+            
         </div>
+        <p  style="text-align: center; font-size: 20px; line-height: 1.6; color: #ffffff; font-family: 'San Francisco', sans-serif; font-weight: 400; z-index:200;">Stellxr ensures that all websites are designed with responsiveness in mind, guaranteeing optimal viewing and interaction experience across a variety of devices and screen sizes. Our commitment to responsiveness means that your website will adapt seamlessly to desktops, tablets, and mobile phones, ensuring a consistent and user-friendly experience for all visitors.</p>
+        
     </div>
 
-
-    <div class="local-video">
-        <video autoplay muted loop playsinline>
-            <source src="noname.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
 
  
     <section class="container4526452">
       <div class="image-container">
           <img src="Untitled design.gif" alt="Placeholder Image">
+          
       </div>
       <div class="content-container">
           <h2>Is this the fututure?</h2>

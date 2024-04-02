@@ -1,240 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellxr - Innovative Website Design and AI Solutions</title>
-    <meta name="description" content="Stellxr offers innovative website designing, AI technologies, and creative solutions to turn your ideas into reality. Contact us now!">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@700&family=PT+Serif:ital@1&family=Press+Start+2P&family=Schoolbell&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="canonical" href="https://www.stellxr.com/page1.html">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stellxr</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="newstyles.css">
+<style>
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-caption {
+        bottom: 2rem;
+    }
+
+    .top-bar {
+        background-color: #1a77f1;
+        color: #ffffff;
+        padding: 1rem 10rem;
+    }
+
+    .navbar {
+        background-color: #ffffff;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .navbar-brand {
+        font-weight: 600;
+        color: #000;
+    }
+
+    .navbar-nav .nav-link {
+        color: #000000;
+        font-weight: 500;
+        margin-right: 20px;
+        font-size: 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #007bff;
+    }
+
+    .navbar.fixed-top {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .about-section h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .about-section p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .services-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        background-color: #ffffff;
+        flex-wrap: wrap;
+    }
+
+    .service {
+        flex: 1;
+        max-width: 300px;
+        text-align: center;
+        margin: 15px;
+    }
+
+    .service img {
+        width: 80%;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    .mission-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px;
+        background-color: #fff;
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .mission-section img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    .mission-content {
+        text-align: center;
+        padding: 0 50px;
+    }
+
+    .mission-content h2 {
+        font-size: 3em;
+        margin-bottom: 30px;
+    }
+
+    .mission-content p {
+        font-size: 1.5em;  
+        margin-bottom: 30px;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .carousel-item img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .top-bar {
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-brand {
+            font-size: 1.5em;
+        }
+
+        .navbar-nav .nav-link {
+            margin-right: 10px;
+        }
+
+        .about-section {
+            padding: 30px;
+        }
+
+        .about-section h1 {
+            font-size: 2.5em;
+        }
+
+        .about-section p {
+            font-size: 1em;
+        }
+
+        .service {
+            flex: 1 1 100%;
+            max-width: 100%;
+            margin: 15px 0;
+        }
+
+        .service img {
+            width: 70%;
+        }
+
+        .mission-content h2 {
+            font-size: 2.5em;
+        }
+
+        .mission-content p {
+            font-size: 1.2em;
+        }
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    /* Fireworks styles */
+    .fireworks-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10000;
+    }
+
+    .firecracker {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: #f00;
+        border-radius: 50%;
+        animation: explode 2s forwards;
+    }
+
+    @keyframes explode {
+        0% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(30);
+            opacity: 0;
+        }
+    }
+</style>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar22343" style="position: fixed; width: 100%; z-index: 100; top: 0;">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Stellxr</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="page2.html">Website</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="a.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="e.html">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://wa.me/919037452346">Contact</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i
-                            class="fas fa-search"></i>submit</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-    <br><br><br>
-    <section id="iphone11" class="hero iphone-11">
-        <div class="container">
-            <div class="title title-dark">
-                <h2 class="title-heading">Website Designing </h2>
-                <h3 class="title-sub-heading">Turn your ideas into reality</h3>
-                <p class="title-price"> with our affordable and dynamic creative services.</p>
-            </div>
-            <div class="cta">
-                <a href="page2.html" class="cta-link cta-link-darker">learn more</a>
-                <a href="https://wa.me/919037452346" class="cta-link cta-link-darker">Buy</a>
-            </div>
-        </div>
-    </section>
-    <div class="header">
-        <video autoplay muted loop poster="video-poster.jpg">
-            <source src="Copy of Copy of website website (3).mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <!--Content before waves-->
-        <div class="inner-header flex">
-            <!--Just the logo.. Don't mind this-->
-            <div class="container">
-                <div class="title">
-                    <h2 class="title-heading">About us</h2>
-                    <h3 class="title-sub-heading"></h3>
-                    <p class="title-price" style="color: aliceblue;">"We're not just in the business of technology; we're in the business of reimagining the future. Every invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our DNA."</p>
-                </div>
-                <div class="cta">
-                    <a href="a.html" class="cta-link">learn more</a>
-                    <a href="https://wa.me/919037452346" class="cta-link">Contact</a>
-                </div>
-            </div>
-        </div>
 
-        <!--Waves Container-->
+<div class="top-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <span><i class="bi bi-phone" ></i> +91 9037452346</span>
+                <span class="ms-4"><i class="bi bi-envelope"></i> tech.stellxr@gmail.com</span>
+            </div>
+            <div class="col-md-6 text-end">
+                <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="https://github.com/stellxr-tech/stellxrreal/blob/main/logoreal.png?raw=true" alt="Logo" height="30"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page2.html">Website</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="a.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="e.html">Events</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="https://api.whatsapp.com/send/?phone=919037452346&text&type=phone_number&app_absent=0">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="parallax1-container" style="background-color: black;">
+    <br><br>
+</div>
+
+<div class="parallax-text container text-center text-white">
+    <img src="logo.png" alt="Company Logo" class="img-fluid" style="max-width: 200px;">
+    <p class="mt-4">
+        "We're not just in the business of technology; we're in the business of reimagining the future. Every
+        invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our
+        DNA."
+    </p>
+</div>
+
+<div class="about-section">
+    <h1 style="font-size: 40px;">Welcome to Stellxr</h1>
+    <p style="font-size: 20px;">We are a leading web design, poster design, and AI company dedicated to providing innovative solutions for businesses.</p>
+</div>
+
+<div class="services-section">
+    <div class="service">
+        <img src="https://cdn.dribbble.com/users/295352/screenshots/1015226/voov_anim_anvil_01.gif" alt="Web Designing">
+        <h3>Web Designing</h3>
+        <p style="font-size: 17px;">We create stunning and responsive websites that help your business stand out online.</p>
+    </div>
+    <div class="service">
+        <img src="https://cdn.dribbble.com/users/1699373/screenshots/6961028/poster_gif.gif" alt="Poster Designing">
+        <h3>Poster Designing</h3>
+        <p style="font-size: 15px;">We design eye-catching posters and graphics to promote your brand and events effectively.</p>
+    </div>
+    <div class="service">
+        <img src="https://i.pinimg.com/originals/98/3b/63/983b63592a42295d638b4b3120df9cc8.gif" alt="AI Solutions">
+        <h3>AI Solutions</h3>
+        <p style="font-size: 15px;">Utilizing the latest AI technologies, we develop intelligent solutions to automate and enhance your business processes.</p>
+    </div>
+</div>
+
+<section id="iphone11" class="hero iphone-11">
+    <div class="container">
+        <div class="title title-dark">
+            <h2 class="title-heading">Website Designing </h2>
+            <h3 class="title-sub-heading">Turn your ideas into reality</h3>
+            <p class="title-price"> with our affordable and dynamic creative services.</p>
+        </div>
+        <div class="cta">
+            <a href="page2.html" class="cta-link cta-link-darker">learn more</a>
+            <a href="https://wa.me/919037452346" class="cta-link cta-link-darker">Buy</a>
+        </div>
+    </div>
+</section>
+
+<div class="header">
+    <video autoplay muted loop poster="video-poster.jpg">
+        <source src="Copy of Copy of website website (3).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!--Content before waves-->
+    <div class="inner-header flex">
+    <!--Just the logo.. Don't mind this-->
+    <div class="container">
+        <div class="title">
+            <h2 class="title-heading">About us</h2>
+            <h3 class="title-sub-heading"></h3>
+            <p class="title-price" style="color: aliceblue;">"We're not just in the business of technology; we're in the business of reimagining the future. Every invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our DNA."</p>
+        </div>
+        <div class="cta">
+            <a href="a.html" class="cta-link">learn more</a>
+            <a href="https://wa.me/919037452346" class="cta-link">Contact</a>
+        </div>
+    </div>
+    </div>
+    
+    <!--Waves Container-->
+    <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+
+    </g>
+    </svg>
+    </div>
+</div>
+
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block"></div>
+        <!-- Left -->
+  
+        <!-- Right -->
         <div>
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-
-                </g>
-            </svg>
+            <a href="" class="me-4 text-reset"><i class="fab fa-facebook-f"></i></a>
+            <a href="" class="me-4 text-reset"><i class="fab fa-twitter"></i></a>
+            <a href="" class="me-4 text-reset"><i class="fab fa-google"></i></a>
+            <a href="" class="me-4 text-reset"><i class="fab fa-instagram"></i></a>
+            <a href="" class="me-4 text-reset"><i class="fab fa-linkedin"></i></a>
+            <a href="" class="me-4 text-reset"><i class="fab fa-github"></i></a>
         </div>
-    </div>
-    <section id="products-page">
-        <div id="iphone-product">
-            <h1>poster designing</h1>
-            <a href="a.html" class="cta-link cta-link-darker" id="vibrate-link">learn more></a>
-            <a href="https://wa.me/919037452346" class="cta-link cta-link-darker" id="vibrate-link">Contact></a>
-            <p class="product-subtext">Ahaa.... you want quality posters?</p>
-            <img src="helioreal.png" id="iphone-product-image" alt="Quality Poster Design by Stellxr">
-        </div>
-        <div id="watch-product">
-            <h1>Events</h1>
-            <a href="e.html" class="cta-link cta-link-darker">learn more></a>
-            <a href="https://wa.me/919037452346" class="cta-link cta-link-darker">Contact></a>
-            <p class="product-subtext">Excited to see whats commin new to stellxr..?</p>
-            <img src="ezgif.com-video-to-gif.gif" id="watch-product-image" alt="Upcoming Events by Stellxr">
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"><img src="logoreal.png" alt="" style="height: 50px;"></i>Stellxr
+                    </h6>
+                    <p>
+                        "We're not just in the business of technology; we're in the business of reimagining the future. Every invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our DNA."
+                    </p>
+                </div>
+                <!-- Grid column -->
+  
+                <!-- Grid column -->
+         
+                <!-- Grid column -->
+  
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                    </h6>
+                    <p>
+                        <a href="https://wa.me/919037452346" class="text-reset">Contact</a>
+                    </p>
+                    <p>
+                        <a href="page2.html" class="text-reset">Webdesign</a>
+                    </p>
+                    <p>
+                        <a href="a.html" class="text-reset">About us</a>
+                    </p>
+                    <p>
+                        <a href="e.html" class="text-reset">Events</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+  
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                    <p><i class="fas fa-home me-3"></i> Aniyaram po 670672</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        tech.stellxr@gmail.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> +91 9037452346</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
         </div>
     </section>
-
-    <div class="header">
-        <section id="iphone" class="hero iphone-11-pro">
-            <div class="container">
-                <div class="title">
-                    <h2 class="title-heading">STELLA</h2>
-                    <h3 class="title-sub-heading">Our AI COMPANY to change the world</h3>
-                    <p class="title-price">leap into the future with stella ai technolegys</p>
-                </div>
-                <div class="cta">
-                    <a href="page3.html" class="cta-link">learn more</a>
-                    <a href="https://wa.me/919037452346" class="cta-link">Contact</a>
-                </div>
-            </div>
-        </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="index.html">stellxr   <br> version:1.00</a>
     </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
 
-    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <div class="me-5 d-none d-lg-block">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-            </div>
-            <div>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-        </section>
-        <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <div class="row mt-3">
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"><img src="logoreal.png" alt="" style="height: 50px;"></i>Stellxr
-                        </h6>
-                        <p>
-                            "We're not just in the business of technology; we're in the business of reimagining the future. Every invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our DNA."
-                        </p>
-                    </div>
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                        </h6>
-                        <p>
-                            <a href="https://wa.me/919037452346" class="text-reset">Contact</a>
-                        </p>
-                        <p>
-                            <a href="page2.html" class="text-reset">Webdesign</a>
-                        </p>
-                        <p>
-                            <a href="a.html" class="text-reset">About us</a>
-                        </p>
-                        <p>
-                            <a href="e.html" class="text-reset">Events</a>
-                        </p>
-                    </div>
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                        <p><i class="fas fa-home me-3"></i> Aniyaram po 670672</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            tech.stellxr@gmail.com
-                        </p>
-                        <p><i class="fas fa-phone me-3"></i> +91 9037452346</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2024 Copyright:
-            <a class="text-reset fw-bold" href="index.html">stellxr <br> version:1.00</a>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $('.carousel').carousel({
-            interval: 2000, // Change slide every 2 seconds (2000 milliseconds)
-            pause: 'hover' // Pause on hover
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var myCarousel = document.querySelector('#carouselExampleIndicators');
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 3000, // Change slide every 3 seconds
+            wrap: true
         });
+    });
+</script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links ul');
-
-            hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const vibrateLink = document.getElementById('vibrate-link');
-
-            vibrateLink.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                // Check if the browser supports the vibration API
-                if ("vibrate" in navigator) {
-                    // Vibrate for 200 milliseconds
-                    navigator.vibrate(200);
-                } else {
-                    // Handle unsupported feature
-                    alert('Vibration is not supported in your browser.');
-                }
-            });
-        });
-    </script>
 </body>
-
 </html>

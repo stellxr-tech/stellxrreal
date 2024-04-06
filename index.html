@@ -224,169 +224,117 @@
 
 
 
-    <script>
-    // Firecracker
-    document.addEventListener("DOMContentLoaded", function() {
-        const firecracker = document.createElement('div');
-        firecracker.className = 'firecracker';
-        document.body.appendChild(firecracker);
+<style>
 
-        setTimeout(() => {
-            firecracker.remove();
-        }, 2000);
-    });
 
-    // Fireworks
-    var bits=80; // how many bits
-    var speed=45; // how fast - smaller is faster
-    var bangs=5; // how many can be launched simultaneously (note that using too many can slow the script down)
-    var colours=["#03f", "#f03", "#0e0", "#93f", "#0cf", "#f93", "#f0c"]; 
-    //                     blue    red     green   purple  cyan    orange  pink
-
-    var bangheight=[];
-    var intensity=[];
-    var colour=[];
-    var Xpos=[];
-    var Ypos=[];
-    var dX=[];
-    var dY=[];
-    var stars=[];
-    var decay=[];
-    var swide=800;
-    var shigh=600;
-    var boddie;
-
-    if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
-      var oldonload=window.onload;
-      if (typeof(oldonload)!='function') window.onload=funky;
-      else window.onload=function() {
-        if (oldonload) oldonload();
-        funky();
-      }
+    .hero-section {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: url('https://images.unsplash.com/photo-1516972810927-80185027ca84') no-repeat center center/cover;
     }
 
-    addRVLoadEvent(light_blue_touchpaper);
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+        z-index: 1;
+    }
 
-    function light_blue_touchpaper() { 
-        if (document.getElementById) {
-            var i;
-            boddie=document.createElement("div");
-            boddie.className = "fireworks-container";
-            document.body.appendChild(boddie);
-            set_width();
-            for (i=0; i<bangs; i++) {
-                write_fire(i);
-                launch(i);
-                setInterval('stepthrough('+i+')', speed);
-            }
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
+    }
+
+    .hero-title {
+        font-size: 4.5em;
+        margin-bottom: 0.8em;
+        letter-spacing: 3px;
+        animation: fadeInDown 1s ease-out;
+    }
+
+    .hero-subtitle {
+        font-size: 2em;
+        margin-bottom: 1.5em;
+        animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-button {
+        padding: 1em 2.5em;
+        font-size: 1.3em;
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        animation: bounceIn 1s ease-out;
+        box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
+    }
+
+    .hero-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.08);
+        box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+    }
+
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 
-    function write_fire(N) {
-        var i;
-        stars[N+'r']=createDiv('|', 12);
-        boddie.appendChild(stars[N+'r']);
-        for (i=bits*N; i<bits+bits*N; i++) {
-            stars[i]=createDiv('*', 13);
-            boddie.appendChild(stars[i]);
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 
-    function createDiv(char, size) {
-        var div=document.createElement("div");
-        div.style.font=size+"px monospace";
-        div.style.position="absolute";
-        div.style.backgroundColor="transparent";
-        div.appendChild(document.createTextNode(char));
-        return (div);
+    @keyframes bounceIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 
-    function launch(N) {
-        colour[N]=Math.floor(Math.random()*colours.length);
-        Xpos[N+"r"]=swide*0.5;
-        Ypos[N+"r"]=shigh-5;
-        bangheight[N]=Math.round((0.5+Math.random())*shigh*0.4);
-        dX[N+"r"]=(Math.random()-0.5)*swide/bangheight[N];
-        if (dX[N+"r"]>1.25) stars[N+"r"].firstChild.nodeValue="/";
-        else if (dX[N+"r"]<-1.25) stars[N+"r"].firstChild.nodeValue="\\";
-        else stars[N+"r"].firstChild.nodeValue="|";
-        stars[N+"r"].style.color=colours[colour[N]];
-    }
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 3.5em;
+        }
 
-    function bang(N) {
-        var i, Z, A=0;
-        for (i=bits*N; i<bits+bits*N; i++) { 
-            Z=stars[i].style;
-            Z.left=Xpos[i]+"px";
-            Z.top=Ypos[i]+"px";
-            if (decay[i]) decay[i]--;
-            else A++;
-            if (decay[i]==15) Z.fontSize="7px";
-            else if (decay[i]==7) Z.fontSize="2px";
-            else if (decay[i]==1) Z.visibility="hidden";
-            if (decay[i]>1 && Math.random()<.1) {
-               Z.visibility="hidden";
-               setTimeout('stars['+i+'].style.visibility="visible"', speed-1);
-            }
-            Xpos[i]+=dX[i];
-            Ypos[i]+=(dY[i]+=1.25/intensity[N]);
+        .hero-subtitle {
+            font-size: 1.8em;
         }
-        if (A!=bits) setTimeout("bang("+N+")", speed);
-    }
 
-    function stepthrough(N) { 
-        var i, M, Z;
-        var oldx=Xpos[N+"r"];
-        var oldy=Ypos[N+"r"];
-        Xpos[N+"r"]+=dX[N+"r"];
-        Ypos[N+"r"]-=4;
-        if (Ypos[N+"r"]<bangheight[N]) {
-            M=Math.floor(Math.random()*3*colours.length);
-            intensity[N]=5+Math.random()*4;
-            for (i=N*bits; i<bits+bits*N; i++) {
-                Xpos[i]=Xpos[N+"r"];
-                Ypos[i]=Ypos[N+"r"];
-                dY[i]=(Math.random()-0.5)*intensity[N];
-                dX[i]=(Math.random()-0.5)*(intensity[N]-Math.abs(dY[i]))*1.25;
-                decay[i]=16+Math.floor(Math.random()*16);
-                Z=stars[i];
-                if (M<colours.length) Z.style.color=colours[i%2?colour[N]:M];
-                else if (M<2*colours.length) Z.style.color=colours[colour[N]];
-                else Z.style.color=colours[i%colours.length];
-                Z.style.fontSize="13px";
-                Z.style.visibility="visible";
-            }
-            bang(N);
-            launch(N);
+        .hero-button {
+            font-size: 1.1em;
         }
-        stars[N+"r"].style.left=oldx+"px";
-        stars[N+"r"].style.top=oldy+"px";
-    } 
-
-    window.onresize=set_width;
-    function set_width() {
-        var sw_min=999999;
-        var sh_min=999999;
-        if (document.documentElement && document.documentElement.clientWidth) {
-            if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-            if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-        }
-        if (typeof(self.innerWidth)!="undefined" && self.innerWidth) {
-            if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-            if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-        }
-        if (document.body.clientWidth) {
-            if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-            if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-        }
-        if (sw_min==999999 || sh_min==999999) {
-            sw_min=800;
-            sh_min=600;
-        }
-        swide=sw_min;
-        shigh=sh_min;
     }
-</script>
+</style>
 </head>
 <body>
 
@@ -434,18 +382,20 @@
     </div>
 </nav>
 
-<div class="parallax1-container" style="background-color: black;">
-    <br><br>
-</div>
 
-<div class="parallax-text container text-center text-white">
-    <img src="logo.png" alt="Company Logo" class="img-fluid" style="max-width: 200px;">
-    <p class="mt-4">
-        "We're not just in the business of technology; we're in the business of reimagining the future. Every
-        invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our
-        DNA."
-    </p>
-</div>
+
+
+<section class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">Welcome to Stellxr</h1>
+        <p class="hero-subtitle" style="max-width: 600px;">
+             we're in the business of reimagining the future. Every
+            invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our
+            DNA."
+        </p>
+       <a href="https://api.whatsapp.com/send/?phone=919037452346&text&type=phone_number&app_absent=0"> <button class="hero-button">Get Started Now</button></a>
+    </div>
+</section>
 
 <div class="about-section">
     <h1 style="font-size: 40px;">Welcome to Stellxr</h1>

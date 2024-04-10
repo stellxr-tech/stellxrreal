@@ -1,391 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stellxr</title>
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="newstyles.css">
-<style>
-    .carousel-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-caption {
-        bottom: 2rem;
-    }
-
-    .top-bar {
-        background-color: #1a77f1;
-        color: #ffffff;
-        padding: 1rem 10rem;
-    }
-
-    .navbar {
-        background-color: #ffffff;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-
-    .navbar-brand {
-        font-weight: 600;
-        color: #000;
-    }
-
-    .navbar-nav .nav-link {
-        color: #000000;
-        font-weight: 500;
-        margin-right: 20px;
-        font-size: 15px;
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: #007bff;
-    }
-
-    .navbar.fixed-top {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    .about-section {
-        padding: 50px;
-        text-align: center;
-        background-color: #fff;
-        box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .about-section h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
-
-    .about-section p {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-    }
-
-    .services-section {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 20px;
-        background-color: #ffffff;
-        flex-wrap: wrap;
-    }
-
-    .service {
-        flex: 1;
-        max-width: 300px;
-        text-align: center;
-        margin: 15px;
-    }
-
-    .service img {
-        width: 80%;
-        border-radius: 50%;
-        margin-bottom: 20px;
-    }
-
-    .mission-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 80px;
-        background-color: #fff;
-        box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .mission-section img {
-        max-width: 100%;
-        border-radius: 10px;
-        margin-bottom: 30px;
-    }
-
-    .mission-content {
-        text-align: center;
-        padding: 0 50px;
-    }
-
-    .mission-content h2 {
-        font-size: 3em;
-        margin-bottom: 30px;
-    }
-
-    .mission-content p {
-        font-size: 1.5em;  
-        margin-bottom: 30px;
-    }
-
-    footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    @media screen and (max-width: 768px) {
-        .carousel-item img {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .top-bar {
-            padding: 0.5rem 1rem;
-        }
-
-        .navbar-brand {
-            font-size: 1.5em;
-        }
-
-        .navbar-nav .nav-link {
-            margin-right: 10px;
-        }
-
-        .about-section {
-            padding: 30px;
-        }
-
-        .about-section h1 {
-            font-size: 2.5em;
-        }
-
-        .about-section p {
-            font-size: 1em;
-        }
-
-        .service {
-            flex: 1 1 100%;
-            max-width: 100%;
-            margin: 15px 0;
-        }
-
-        .service img {
-            width: 70%;
-        }
-
-        .mission-content h2 {
-            font-size: 2.5em;
-        }
-
-        .mission-content p {
-            font-size: 1.2em;
-        }
-    }
-
-    footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        margin-top: 50px;
-    }
-
-    /* Fireworks styles */
-    .fireworks-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 10000;
-    }
-
-    .firecracker {
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        background: #f00;
-        border-radius: 50%;
-        animation: explode 2s forwards;
-    }
-
-    @keyframes explode {
-        0% {
-            transform: scale(1);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(30);
-            opacity: 0;
-        }
-    }
-</style>
-
-
-
-<style>
-
-
-    .hero-section {
-        position: relative;
-        width: 100%;
-        height: 70vh;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: url('https://images.unsplash.com/photo-1516972810927-80185027ca84') no-repeat center center/cover;
-    }
-
-    .hero-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
-        z-index: 1;
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        color: #ffffff;
-    }
-
-    .hero-title {
-        font-size: 4.5em;
-        margin-bottom: 0.8em;
-        letter-spacing: 3px;
-        animation: fadeInDown 1s ease-out;
-    }
-
-    .hero-subtitle {
-        font-size: 2em;
-        margin-bottom: 1.5em;
-        animation: fadeInUp 1s ease-out;
-    }
-
-    .hero-button {
-        padding: 1em 2.5em;
-        font-size: 1.3em;
-        background-color: #007bff;
-        color: #ffffff;
-        border: none;
-        border-radius: 40px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        animation: bounceIn 1s ease-out;
-        box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
-    }
-
-    .hero-button:hover {
-        background-color: #0056b3;
-        transform: scale(1.08);
-        box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
-    }
-
-    @keyframes fadeInDown {
-        from {
-            opacity: 0;
-            transform: translateY(-40px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(40px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes bounceIn {
-        from {
-            opacity: 0;
-            transform: scale(0.9);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .hero-title {
-            font-size: 3.5em;
-        }
-
-        .hero-subtitle {
-            font-size: 1.8em;
-        }
-
-        .hero-button {
-            font-size: 1.1em;
-        }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="newstyles.css">
+    <title>Stellxr</title>
+    <script src="script.js"></script>
 </head>
-<body>
-
-<div class="top-bar">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <span><i class="bi bi-phone" ></i> +91 9037452346</span>
-                <span class="ms-4"><i class="bi bi-envelope"></i> tech.stellxr@gmail.com</span>
-            </div>
-            <div class="col-md-6 text-end">
-                <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
+<body style="background-color: white;">
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <span><i class="bi bi-phone" ></i> +91 9037452346</span>
+                    <span class="ms-4"><i class="bi bi-envelope"></i> tech.stellxr@gmail.com</span>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="https://github.com/stellxr-tech/stellxrreal/blob/main/logoreal.png?raw=true" alt="Logo" height="30"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="page2.html">Website</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="a.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="e.html">Events</a>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="https://api.whatsapp.com/send/?phone=919037452346&text&type=phone_number&app_absent=0">Contact</a>
-                </li>
-            </ul>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="https://github.com/stellxr-tech/stellxrreal/blob/main/logoreal.png?raw=true" alt="Logo" height="30"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page2.html">Website</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="a.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="e.html">Events</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="https://api.whatsapp.com/send/?phone=919037452346&text&type=phone_number&app_absent=0">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-
-
-
-
-<section class="hero-section">
+    </nav>
+    
+    
+<section class="hero-section" >
     <div class="hero-content">
         <h1 class="hero-title">Welcome to Stellxr</h1>
         <p class="hero-subtitle" style="max-width: 600px;">
@@ -397,78 +66,336 @@
     </div>
 </section>
 
-<div class="about-section">
-    <h1 style="font-size: 40px;">Welcome to Stellxr</h1>
-    <p style="font-size: 20px;">We are a leading web design, poster design, and AI company dedicated to providing innovative solutions for businesses.</p>
+<div class="marquee-container">
+    <div class="marquee">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        <img src="11-removebg-preview.png" alt="Logo" class="logo">
+        <img src="1468f371-d37d-40cc-acf8-e649ea3d434b-removebg-preview.png" alt="Logo" class="logo">
+        <img src="12423434.png" alt="Logo" class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu_PcnKceoK53zCwRsyp8809GxHKd_BrJJUKR8oxvAPg&s" alt="Logo" class="logo">
+        
+    </div>
 </div>
-
-<div class="services-section">
-    <div class="service">
-        <img src="https://cdn.dribbble.com/users/295352/screenshots/1015226/voov_anim_anvil_01.gif" alt="Web Designing">
-        <h3>Web Designing</h3>
-        <p style="font-size: 17px;">We create stunning and responsive websites that help your business stand out online.</p>
-    </div>
-    <div class="service">
-        <img src="https://cdn.dribbble.com/users/1699373/screenshots/6961028/poster_gif.gif" alt="Poster Designing">
-        <h3>Poster Designing</h3>
-        <p style="font-size: 15px;">We design eye-catching posters and graphics to promote your brand and events effectively.</p>
-    </div>
-    <div class="service">
-        <img src="https://i.pinimg.com/originals/98/3b/63/983b63592a42295d638b4b3120df9cc8.gif" alt="AI Solutions">
-        <h3>AI Solutions</h3>
-        <p style="font-size: 15px;">Utilizing the latest AI technologies, we develop intelligent solutions to automate and enhance your business processes.</p>
-    </div>
-</div>
-
-<section id="iphone11" class="hero iphone-11">
+<section class="about-section">
     <div class="container">
-        <div class="title title-dark">
-            <h2 class="title-heading">Website Designing </h2>
-            <h3 class="title-sub-heading">Turn your ideas into reality</h3>
-            <p class="title-price"> with our affordable and dynamic creative services.</p>
-        </div>
-        <div class="cta">
-            <a href="page2.html" class="cta-link cta-link-darker">learn more</a>
-            <a href="https://wa.me/919037452346" class="cta-link cta-link-darker">Buy</a>
+        <div class="row align-items-center">
+            <!-- About Text -->
+
+            <div class="col-lg-6 about-text">
+                
+                <h2> <span class="badge bg-success">30% off now</span><br>Stellxr Revolutionizes Website Personalization </h2>
+                <p>
+                    Stellxr revolutionizes website personalization with dynamic theme adaptation tailored to the seasons.
+                    Our state-of-the-art technology fluidly adjusts the website's aesthetics to mirror the current season,
+                    ensuring a consistently fresh and relevant visual experience. From the vibrant hues of spring to the sun-kissed
+                    shades of summer, the earthy tones of autumn, and the crisp palettes of winter, our websites adapt seamlessly
+                    to create an immersive and captivating user journey. Choose Stellxr to maintain a visually enchanting and
+                    seasonally relevant website, elevating user engagement and retention.
+                </p>
+               <b> <p>Web Design</p></b>
+                <div class="progress">
+                    
+                    <div class="progress-bar" style="width:95%"></div>
+                  </div>
+                  <b> <p>Responcive</p></b>
+                <div class="progress">
+                    
+                    <div class="progress-bar" style="width:100%"></div>
+                  </div>
+                  <b> <p>Customisation</p></b>
+                <div class="progress">
+                    
+                    <div class="progress-bar" style="width:85%"></div>
+                  </div>
+
+
+                  <b> <p>AI Integration</p></b>
+                <div class="progress">
+                    
+                    <div class="progress-bar" style="width:75%"></div>
+                  </div>
+                  <br>
+                  <a href="page2.html">  <button type="button" class="btn btn-outline-primary">Learn more about our websites</button></a>
+            </div>
+            <!-- About Image -->
+          
+            <div class="col-lg-6">
+                <img src="Untitled design (7).png" alt="Stellxr Image" class="img-fluid about-img fade-in">
+            </div>
         </div>
     </div>
 </section>
 
-<div class="header">
-    <video autoplay muted loop poster="video-poster.jpg">
-        <source src="Copy of Copy of website website (3).mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <!--Content before waves-->
-    <div class="inner-header flex">
-    <!--Just the logo.. Don't mind this-->
-    <div class="container">
-        <div class="title">
-            <h2 class="title-heading">About us</h2>
-            <h3 class="title-sub-heading"></h3>
-            <p class="title-price" style="color: aliceblue;">"We're not just in the business of technology; we're in the business of reimagining the future. Every invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our DNA."</p>
-        </div>
-        <div class="cta">
-            <a href="a.html" class="cta-link">learn more</a>
-            <a href="https://wa.me/919037452346" class="cta-link">Contact</a>
-        </div>
-    </div>
-    </div>
-    
-    <!--Waves Container-->
-    <div>
-    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-    <defs>
-    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-    </defs>
-    <g class="parallax">
 
-    </g>
-    </svg>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row"  style="background-color: rgb(0, 89, 255);">
+        <div class="col-6 col-sm-3" style="background-color: rgb(0, 89, 255); color:white">
+            <div class="service">
+                <img src="https://cdn.dribbble.com/users/295352/screenshots/1015226/voov_anim_anvil_01.gif" alt="Web Designing">
+                <h3 class="text-center">Web Designing</h3>
+                <p class="text-center">We create stunning and responsive websites that help your business stand out online.</p>
+            </div>
+        </div>
+        <div class="col-6 col-sm-3" style="background-color: rgb(0, 89, 255); color:white">
+            <div class="service">
+                <img src="https://cdn.dribbble.com/users/1699373/screenshots/6961028/poster_gif.gif" alt="Poster Designing">
+                <h3 class="text-center">Poster Designing</h3>
+                <p class="text-center">We design eye-catching posters and graphics to promote your brand and events effectively.</p>
+            </div>
+        </div>
+        <div class="col-6 col-sm-3" style="background-color: rgb(0, 89, 255); color:white">
+            <div class="service">
+                <img src="https://i.pinimg.com/originals/98/3b/63/983b63592a42295d638b4b3120df9cc8.gif" alt="AI Solutions">
+                <h3 class="text-center">AI Solutions</h3>
+                <p class="text-center">Utilizing the latest AI technologies, we develop intelligent solutions to automate and enhance your business processes.</p>
+            </div>
+        </div>
+        <div class="col-6 col-sm-3" style="background-color: rgb(0, 89, 255); color:white">
+            <div class="service">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/09804a82963291.5d308c3850e2c.gif" alt="AI Solutions">
+                <h3 class="text-center">Mobile Apps</h3>
+                <p class="text-center">Get your ownn premium app at a very affordable rate that is well designed and optimised</p>
+            </div>
+        </div>
     </div>
 </div>
 
+
+
+
+
+
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- About Text -->
+            <div class="col-lg-6">
+                <img src="Untitled design (8).png" alt="Stellxr Image" class="img-fluid about-img fade-in">
+            </div>
+          
+            <div class="col-lg-6 about-text">
+                
+                <h2> <span class="badge bg-success">60% off now</span><br>"Stellxr: Exceptional Poster Designing at Unbeatable Prices" </h2>
+                <p>
+                    Stellxr is a pioneering company renowned for its exceptional poster designing services. We pride ourselves on delivering high-quality posters that not only captivate the audience but also effectively convey the intended message. Despite our unwavering commitment to excellence, we remain dedicated to affordability, ensuring that our clients receive the best value for their investment. At Stellxr, we believe that top-notch design shouldn't come with a hefty price tag, and thus we offer our unparalleled poster designing services at a very low cost. With our talented team of designers and a customer-centric approach, Stellxr is the go-to choice for businesses and individuals seeking outstanding posters without breaking the bank.
+                </p>
+               <b> <p>Design</p></b>
+                <div class="progress">
+                    
+                    <div class="progress-bar" style="width:95%"></div>
+                  </div>
+                  <b> <p>Uniqueness </p></b>
+                <div class="progress">
+                    
+                    <div class="progress-bar" style="width:100%"></div>
+                  </div>
+                  <b> <p>affordability</p></b>
+                <div class="progress">
+                    
+                    <div class="progress-bar" style="width:100%"></div>
+                  </div>
+
+
+                  <b> <p>Fast</p></b>
+                <div class="progress">
+                    
+                    <div class="progress-bar" style="width:85%"></div>
+                  </div>
+                  <br>
+                  <a href="https://api.whatsapp.com/send/?phone=919037452346&text&type=phone_number&app_absent=0">    <button type="button" class="btn btn-outline-primary">Learn more about our posters</button></a>
+            </div>
+            <!-- About Image -->
+          
+        </div>
+    </div>
+</section>
+
+</div>
+
+
+
+
+  </section>
+<section class="about-section" style="margin-top: -90px;">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- About Text -->
+            <div class="col-lg-6 about-text">
+                <h2>  Crafting Digital Masterpieces:  <font style="background-color: rgb(255, 69, 255); color: rgb(0, 0, 0);"> Stellxr</font>'s AI-Driven Web Wonders and Poster Perfection</h2>
+                <p style="font-size: 15px;">
+                  
+Stellxr is a leading AI-driven company specializing in web development, app creation, and poster design. We are dedicated to delivering innovative and tailored digital solutions that elevate brands and engage audiences. With our team of expert developers and designers, we harness the power of advanced technologies to create dynamic websites, high-performance applications, and visually striking posters. At Stellxr, we blend creativity with technology to bring your vision to life.
+                </p>
+               
+                 
+              <a href="a.html"> <button type="button" class="btn btn-outline-dark">Learn more about us</button></a> 
+            </div>
+            <!-- About Image -->
+            <div class="col-lg-6">
+                <img src="https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Stellxr Image" class="img-fluid about-img fade-in">
+            </div>
+        </div>
+    </div>
+</section>
+<div style="background-color: white;">
+    <section id="portfolio" class=" py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Our Portfolio</h2>
+      
+          <!-- Portfolio Filters -->
+          <div class="text-center mb-4">
+            <button class="btn btn-outline-dark active" data-filter="all">All</button>
+            <button class="btn btn-outline-dark" data-filter="web">Web Design</button>
+            <button class="btn btn-outline-dark" data-filter="graphic">Graphic Design</button>
+          </div>
+      
+          <!-- Portfolio Items -->
+          <div class="row">
+            <!-- Item 1 -->
+            <div class="col-md-4 portfolio-item web">
+              <div class="card">
+                <img src="https://pxl.stellxr.in/rain.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Website for Rainbow edupark</h5>
+                  <p class="card-text">this is a website made for a tution center</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Item 2 -->
+            <div class="col-md-4 portfolio-item web">
+              <div class="card">
+                <img src="https://pxl.stellxr.in/stell.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Website for Stella</h5>
+                  <p class="card-text">Website made for an ai company</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Item 3 -->
+            <div class="col-md-4 portfolio-item web">
+              <div class="card">
+                <img src="pxweb.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Website for Pixeloutfitter</h5>
+                  <p class="card-text">a website for a creative agency</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Additional Portfolio Items -->
+            <!-- Item 4 -->
+            <div class="col-md-4 portfolio-item graphic" style="display: none;">
+              <div class="card">
+                <img src="https://img.freepik.com/free-vector/realistic-banner-template-onam-celebration_23-2149516031.jpg?t=st=1712762938~exp=1712766538~hmac=8864a9afffc48544f3e49aaba05a29fd45bcdac3c9ce97128f3988166054ab9f&w=1060" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Poster Template made by us</h5>
+                  <p class="card-text">get your own poster like this at just Rs:60</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Item 5 -->
+            <div class="col-md-4 portfolio-item graphic" style="display: none;">
+              <div class="card">
+                <img src="https://img.freepik.com/free-vector/gradient-business-horizontal-banner_23-2149695712.jpg?t=st=1712763023~exp=1712766623~hmac=c6dab95669ecb5fb9db3ea8b54eaffb6cd8c22906c72be3b70a7089fa8405cbc&w=1060" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Poster Template made by us</h5>
+                    <p class="card-text">get your own poster like this at just Rs:60</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Item 6 -->
+            <div class="col-md-4 portfolio-item graphic" style="display: none;">
+              <div class="card">
+                <img src="https://img.freepik.com/free-vector/webinar-template-hotel-business_23-2150253088.jpg?t=st=1712763137~exp=1712766737~hmac=363504d96a09570f41ef23ed914460b45d805d123e07b9df264556c736586805&w=1060" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Poster Template made by us</h5>
+                    <p class="card-text">get your own poster like this at just Rs:60</p>
+                </div>
+              </div>
+            </div>
+      
+          </div><!-- End Row -->
+        </div><!-- End Container -->
+      </section>
+    </div>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".btn").click(function(){
+        var value = $(this).attr("data-filter");
+        if(value == "all") {
+          $(".portfolio-item").show("1000");
+        } else {
+          $(".portfolio-item").hide("1000");
+          $("#portfolio-items").find("." + value).show("1000");
+        }
+        // Active Button
+        $(".btn").removeClass("active");
+        $(this).addClass("active");
+      })
+    });
+  </script>
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -549,6 +476,17 @@
     </section>
     <!-- Section: Links  -->
   
+<!-- The Modal -->
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img src="https://img.jagranjosh.com/images/2024/April/942024/eid-mubarak.webp" alt="Sample Image" class="modal-img">
+        <h2>Happy eid to stellxr family</h2>
+        <p>May allah bless you all......</p>
+    </div>
+</div>
+
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2024 Copyright:
@@ -556,26 +494,52 @@
     </div>
     <!-- Copyright -->
 </footer>
-<!-- Footer -->
+<script>
+    // Get the modal element
+    var modal = document.getElementById("myModal");
 
+    // Get the close button
+    var closeBtn = document.getElementsByClassName("close-btn")[0];
+
+    // When the page loads, open the modal
+    window.onload = function() {
+        modal.style.display = "block";
+    }
+
+    // Close the modal when the close button is clicked
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal when clicking outside the modal content
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<script>
+    $(document).ready(function(){
+      $(".btn").click(function(){
+        var value = $(this).attr("data-filter");
+        if(value == "all") {
+          $(".portfolio-item").show("1000");
+        } else {
+          $(".portfolio-item").not("." + value).hide("1000");
+          $(".portfolio-item").filter("." + value).show("1000");
+        }
+        // Active Button
+        $(".btn").removeClass("active");
+        $(this).addClass("active");
+      })
+    });
+  </script>
+<script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var myCarousel = document.querySelector('#carouselExampleIndicators');
-        var carousel = new bootstrap.Carousel(myCarousel, {
-            interval: 3000, // Change slide every 3 seconds
-            wrap: true
-        });
-    });
-</script>
-
 </body>
 </html>

@@ -117,7 +117,7 @@ html{
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url('https://cdn.pixabay.com/photo/2019/09/17/18/48/computer-4484282_1280.jpg') no-repeat center center/cover;
+  background: url('https://images.unsplash.com/photo-1516972810927-80185027ca84') no-repeat center center/cover;
 }
 
 .hero-section::before {
@@ -704,3 +704,43 @@ footer {
     margin-top: 1rem;
     color: rgba(107, 114, 128, 1);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .testimonial-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-card .card-body {
+    background-color: #f9f9f9;
+    color: #333;
+    border-radius: 0 0 15px 15px;
+}
+
+.testimonial-card img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover img {
+    transform: scale(1.1);
+}

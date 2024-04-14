@@ -14,7 +14,7 @@ html{
 
 
 .top-bar {
-  background-color: #1a77f1;
+  background-color: #ce2cda;
   color: #ffffff;
   padding: 1rem 10rem;
 }
@@ -37,7 +37,7 @@ html{
 }
 
 .navbar-nav .nav-link:hover {
-  color: #007bff;
+  color: #ce2cda;
 }
 
 .navbar.fixed-top {
@@ -111,7 +111,7 @@ html{
 .hero-section {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 75vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -153,7 +153,7 @@ html{
 .hero-button {
   padding: 1em 2.5em;
   font-size: 1.3em;
-  background-color: #007bff;
+  background-color: #8329d9;
   color: #ffffff;
   border: none;
   border-radius: 40px;
@@ -164,7 +164,7 @@ html{
 }
 
 .hero-button:hover {
-  background-color: #0056b3;
+  background-color: #ce2cda;
   transform: scale(1.08);
   box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
 }
@@ -433,84 +433,6 @@ footer {
         width: 0;
       }
     }
-    
-    .terminal-loader {
-      border: 0.1em solid #333;
-      background-color: #1a1a1a;
-      color: #0f0;
-      font-family: "Courier New", Courier, monospace;
-      font-size: 1em;
-      padding: 1.5em 1em;
-      width: 12em;
-      margin: 100px auto;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      border-radius: 4px;
-      position: relative;
-      overflow: hidden;
-      box-sizing: border-box;
-    }
-    
-    .terminal-header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1.5em;
-      background-color: #333;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      padding: 0 0.4em;
-      box-sizing: border-box;
-    }
-    
-    .terminal-controls {
-      float: right;
-    }
-    
-    .control {
-      display: inline-block;
-      width: 0.6em;
-      height: 0.6em;
-      margin-left: 0.4em;
-      border-radius: 50%;
-      background-color: #777;
-    }
-    
-    .control.close {
-      background-color: #e33;
-    }
-    
-    .control.minimize {
-      background-color: #ee0;
-    }
-    
-    .control.maximize {
-      background-color: #0b0;
-    }
-    
-    .terminal-title {
-      float: left;
-      line-height: 1.5em;
-      color: #eee;
-    }
-    
-    .text {
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 0.2em solid green; /* Cursor */
-      animation: typeAndDelete 4s steps(11) infinite,
-        blinkCursor 0.5s step-end infinite alternate;
-      margin-top: 1.5em;
-    }
-    
-
-
-
-
-
-
-
 
 
 
@@ -843,7 +765,7 @@ body, html {
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  border: 3px solid rgb(38, 0, 255);
+  border: 3px solid #8329d9;
   transition: all 200ms ease-out;
   position: fixed;
   pointer-events: none;
@@ -857,7 +779,7 @@ body, html {
   width: 20px; z-index: 1000;
   height: 20px;
   border-radius: 100%;
-  background-color: rgb(255, 251, 0);
+  background-color: #ce2cda;
   opacity: 1;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -866,7 +788,7 @@ body, html {
 }
 
 .hover {
-  background-color: rgb(0, 255, 0);
+  background-color: rgb(0, 30, 255);
   opacity: 0.5; z-index: 1000;
 }
 

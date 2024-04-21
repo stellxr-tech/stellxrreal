@@ -1,98 +1,465 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellxr: Web Design and Graphic Design in Kerala | Portfolio</title>
-    <meta name="keywords" content=" web design, webdesign agency stellxr, stellxrwebsite, webdesignStellxr, Kerala Web Design Agency, Web Design in Kerala, Graphic Design in Kerala, Web Development, AI Solutions, Poster Designing, Web Design Portfolio, Graphic Design Portfolio, Web Design Company Kerala, Graphic Design Company Kerala">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Stellxr">
-
-    <meta name="description" content="Get comprehensive web design and development services with Stellxr, a leading web development company in Kannur, Kerala. Specializing in custom website development, e-commerce solutions, PHP, Laravel, and WordPress development, Stellxr combines creativity with advanced technology to deliver visually appealing and SEO-optimized websites.">
-    <meta name="keywords" content="Stellxr, web design company kerala, web designing kerala, website development in kerala, best web designers in kerala, web development in kerala, best web designing company in kerala, website development companies in kerala, web development company, custom website development, e-commerce solutions, PHP development, Laravel development, WordPress development, SEO-optimized websites">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Stellxr: Web Design and Graphic Design in Kerala | Portfolio">
-    <meta property="og:description" content="Explore Stellxr's portfolio showcasing exceptional Web Design and Graphic Design services in Kerala. Get high-quality designs at unbeatable prices.">
-    <meta property="og:image" content="https://pxl.stellxr.in">
-    <meta property="og:url" content="https://www.stellxr.in">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="stellxr.in">
-    <meta property="twitter:url" content="https://www.stellxr.in">
-    <meta name="twitter:title" content="Stellxr: Web Design and Graphic Design in Kerala | Portfolio">
-    <meta name="twitter:description" content="Explore Stellxr's portfolio showcasing exceptional Web Design and Graphic Design services in Kerala. Get high-quality designs at unbeatable prices.">
-    <meta name="twitter:image" content="https://pxl.stellxr.in">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
-<script></script>
-
-    <link rel="stylesheet" href="newstyles.css">
-
-    <script src="script.js"></script>
-
-
+    <title>STELLXR</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+ 
     <style>
-        .google-logo {
-            max-width: 200px;
-            display: block;
-            margin: 0 auto;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
         }
-    
-        .rating {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
+        .purple-gradient-bg {
+            background: linear-gradient(135deg, #ce2cda, #8329d9);
+            color: #ffffff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
-    
-        .rating i {
-            font-size: 24px;
-            color: gold;
-            margin: 0 5px;
+
+        .no-padding {
+            padding-left: 0;
+            padding-right: 0;
         }
-    
-        .rating i:hover {
-            cursor: pointer;
+
+        .increase-height {
+            min-height: 500px;
         }
+
+        h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .btn-warning {
+            background-color: #fcb900;
+            border-color: #fcb900;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-warning:hover {
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+        }
+             .header {
+            background-image: url('https://via.placeholder.com/1500x500'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .header p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .header .btn {
+            font-size: 1.5rem;
+        }.hero-section {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1516972810927-80185027ca84') no-repeat center center/cover;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.hero-title {
+  font-size: 4.5em;
+  margin-bottom: 0.8em;
+  letter-spacing: 3px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-button {
+  padding: 1em 2.5em;
+  font-size: 1.3em;
+  background-color: #8329d9;
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  animation: bounceIn 1s ease-out;
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
+}
+
+.hero-button:hover {
+  background-color: #ce2cda;
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+
+
+  .hero-title {
+    font-size: 4.5em;
+    margin-bottom: 0.8em;
+    letter-spacing: 3px;
+    animation: fadeInDown 1s ease-out;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5em;
+    max-width: 5px;
+  
+  }
+
+}
+
+
+
+
+
+
+.container11 {
+    height: 200px;
+    width: 350px;
+    border-radius: 1em;
+    overflow: hidden;
+    box-shadow: 0 10px 20px #dbdbdb;
+    font-family: sans-serif;
+  }
+  
+  .palette {
+    display: flex;
+    height: 86%;
+    width: 100%;
+  }
+  
+  .color {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: flex 0.1s linear;
+  }
+  
+  .color span {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+  }
+  
+  .color:nth-child(1) {
+    background: #264653;
+  }
+  
+  .color:nth-child(2) {
+    background: #2a9d8f;
+  }
+  
+  .color:nth-child(3) {
+    background: #e9c46a;
+  }
+  
+  .color:nth-child(4) {
+    background: #f4a261;
+  }
+  
+  .color:nth-child(5) {
+    background: #e76f51;
+  }
+  
+  .color:hover {
+    flex: 2;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .color:hover span {
+    opacity: 1;
+  }
+  
+  #stats {
+    height: 14%;
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5em;
+    box-sizing: border-box;
+    color: #bebebe;
+  }
+  
+  #stats svg {
+    fill: #bebebe;
+    transform: scale(1.2);
+  }
+
+
+
+  
+.top-bar {
+  background-color: #ce2cda;
+  color: #ffffff;
+  padding: 1rem 10rem;
+}
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: #000;
+}
+
+.navbar-nav .nav-link {
+  color: #000000;
+  font-weight: 500;
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ce2cda;
+}
+
+.navbar.fixed-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}.memo{
+  font-size: 20px;
+}
+
+.kiddo{
+  font-size: 60px;
+}
+@media screen and (max-width: 768px) {
+  .carousel-item img {
+      height: 200px;
+      object-fit: cover;
+  }
+
+  .top-bar {
+      padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand {
+      font-size: 1.5em;
+  }
+
+  .navbar-nav .nav-link {
+      margin-right: 10px;
+  }
+}.about-section {
+
+  padding: 80px 0;
+
+}
+
+.about-img {
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+
+.about-text h2 {
+  color: #333;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  transition: color 0.3s ease;
+}
+
+.about-text h2:hover {
+  color: #007bff;
+}
+
+.font-size-lg {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.btn-outline-dark {
+  border-color: #343a40;
+  color: #343a40;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.btn-outline-dark:hover {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.btn-outline-dark:hover .fa-arrow-right {
+  transform: translateX(5px);
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-content {
+
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fa-arrow-right {
+  transition: transform 0.3s ease;
+}.services-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.service {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  margin: 15px;
+}
+
+.service img {
+  width: 80%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.mission-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+
+.mission-section img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.mission-content {
+  text-align: center;
+  padding: 0 50px;
+}
+
+.mission-content h2 {
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+.mission-content p {
+  font-size: 1.5em;  
+  margin-bottom: 30px;
+}
+
+/*service section end*/
+
+
+
+/*abt section start*/
+.about-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.about-text {
+  padding-right: 50px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.about-img {
+  max-height: 400px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .about-text,
+  .about-img {
+      margin-top: 20px;
+      text-align: center;
+  }
+
+  .about-text {
+      padding-right: 0;
+  }
+}
+
+
     </style>
 </head>
-<body style="background-color: white;">
 
-   <center> <div class="preloader">
-        <div class="preloader-img"><div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
-            <div class="wheel"></div>
-            <div class="hamster">
-                <div class="hamster__body">
-                    <div class="hamster__head">
-                        <div class="hamster__ear"></div>
-                        <div class="hamster__eye"></div>
-                        <div class="hamster__nose"></div>
-                    </div>
-                    <div class="hamster__limb hamster__limb--fr"></div>
-                    <div class="hamster__limb hamster__limb--fl"></div>
-                    <div class="hamster__limb hamster__limb--br"></div>
-                    <div class="hamster__limb hamster__limb--bl"></div>
-                    <div class="hamster__tail"></div>
-                </div>
-            </div>
-            <div class="spoke"></div>
-        </div>
-        </div>
-    </div>
-</center>
-          </div>
-    </div>
-    <div class="top-bar">
+<body>
+    <div class="top-bar"style="  font-size: 10px;
+    font-family: 'SF Pro Display',sans-serif;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
@@ -108,7 +475,8 @@
         </div>
     </div>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="  font-size: 10px;
+    font-family: 'SF Pro Display',sans-serif;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="https://github.com/stellxr-tech/stellxrreal/blob/main/logoreal.png?raw=true" alt="Logo" height="30"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -135,224 +503,32 @@
             </div>
         </div>
     </nav>
+
+
     
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Welcome to Stellxr</h1>
-            <p class="hero-subtitle" style="max-width: 600px;">
-                 We're in the business of reimagining the future. Every invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our DNA.
-            </p>
-            <a href="https://api.whatsapp.com/send/?phone=919037452346&text&type=phone_number&app_absent=0" rel="nofollow">
-                <button class="hero-button">Get Started Now</button>
-            </a>
+<div class="container-fluid ">
+    <div class="row">
+        <!-- Left Image -->
+        <div class="col-md-4 no-padding">
+            <img src="headerimg (2).png" alt="Left Image" class="img-fluid w-100">
         </div>
-    </section>
 
-
-
-
-    <section class="about-section" style="margin-top: -50px;">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- About Image -->
-                <div class="col-lg-6 order-lg-2">
-                    <img src="Copy of Untitled Design.gif" 
-                         alt="Stellxr Web Development Company in Kannur, Kerala" 
-                         class="img-fluid about-img fade-in" 
-                         title="Stellxr Web Development Company in Kannur, Kerala">
-                </div>
-    
-                <!-- About Text -->
-                <div class="col-lg-6 about-text order-lg-1">
-                    <div class="about-content">
-                        <h2 class="mb-4"><i class="fas fa-laptop-code mr-3"></i>About Stellxr: Leading Web Development Company in Kannur, Kerala</h2>
-                        <p style="font-size: 15px;">
-                            Stellxr is a leading web development company based in Kannur, Kerala, with over 20 years of industry experience and a portfolio boasting over 1000 successful projects. Specializing in custom website development, e-commerce solutions, PHP, Laravel, and WordPress development, we fuse creativity with advanced technology to create websites that are visually appealing and SEO-optimized. Committed to transforming businesses, we offer meticulously designed social media marketing campaigns to enhance your brand's online visibility and ranking.
-                        </p>
-                        <a href="a.html" class="btn btn-outline-dark mt-4">Learn more about us <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
+        <!-- Center Text -->
+        <div class="col-md-4 d-flex align-items-center justify-content-center p-5 purple-gradient-bg increase-height">
+            <div class="text-center">
+                <h2>STELLXR</h2>
+                <p>We're not just in the business of technology; we're in the business of reimagining the future. Every invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our DNA."</p>
+                <a href="#" class="btn btn-warning">Learn More</a>
             </div>
         </div>
-    </section>
-    
 
-
-
-
-
-
-
-
-
-
-<section class="about-section" style="background-color: #1a1a1a; color: #ffffff; padding: 100px 0;">
-    <div class="container">
-        
-        <div class="row align-items-center">
-            
-            <!-- About Text -->    
-            <div class="col-lg-6 col-md-12 order-md-1">
-                <h2 style="color: #ffffff; font-size: 3.5rem; font-weight: 800; line-height: 1.3; animation: fadeInUp 1s;"><span class="badge bg-success" style="font-size: 2rem; padding: 12px 24px; animation: pulse 1.5s infinite;">Limited Time Offer!</span><br>Stellxr: The Pioneering Kerala Web Design Agency</h2>
-                <p style="color: #b0b0b0; font-size: 1.3rem; line-height: 2; animation: fadeInUp 1s;">
-                    Stellxr is not just another web design agency; we are innovators in website personalization. We bring the magic of seasonal adaptability to your website, dynamically changing its theme to reflect the current season. Imagine the vibrant colors of spring, the warm tones of summer, the earthy shades of autumn, and the cool palettes of winter – our websites adapt to offer a visually captivating and immersive user experience. Elevate your website with Stellxr and keep your audience engaged and coming back for more.
-                </p>
-                
-                <h3 style="color: #ffffff; font-size: 3rem; font-weight: 700; margin-top: 60px; animation: fadeInUp 1s;">Why Choose Stellxr?</h3>
-                
-                <div class="progress mb-5" style="height: 20px; border-radius: 25px; background-color: rgba(255, 255, 255, 0.1); animation: fadeInUp 1s;">
-                    <div class="progress-bar bg-info" style="width:95%; border-radius: 25px; font-size:1.5; font-weight: 600; padding: 12px 24px; animation: progressWidth 2s;">Web Design</div>
-                </div>
-                
-                <div class="progress mb-5" style="height: 20px; border-radius: 25px; background-color: rgba(255, 255, 255, 0.1); animation: fadeInUp 1s;">
-                    <div class="progress-bar bg-warning" style="width:100%; border-radius: 25px; font-size:1.5; font-weight: 600; padding: 12px 24px; animation: progressWidth 2s;">Responsive</div>
-                </div>
-                
-                <div class="progress mb-5" style="height: 20px; border-radius: 25px; background-color: rgba(255, 255, 255, 0.1); animation: fadeInUp 1s;">
-                    <div class="progress-bar bg-success" style="width:85%; border-radius: 25px; font-size:1.5; font-weight: 600; padding: 12px 24px; animation: progressWidth 2s;">Customization</div>
-                </div>
-                
-                <div class="progress mb-5" style="height: 20px; border-radius: 25px; background-color: rgba(255, 255, 255, 0.1); animation: fadeInUp 1s;">
-                    <div class="progress-bar bg-danger" style="width:75%; border-radius: 25px; font-size:1.5; font-weight: 600; padding: 12px 24px; animation: progressWidth 2s;">AI Integration</div>
-                </div>
-                
-                <a href="page2.html" class="btn btn-primary btn-lg" style="font-size: 1.5rem; font-weight: 700; padding: 10px 35px; animation: fadeInUp 1s;">Discover Our Services</a>
-            </div>
-
-            <!-- About Image -->
-            <div class="col-lg-6 col-md-12 order-md-2">
-                <img src="stell.jpeg" alt="Stellxr Kerala Web Design Agency" class="img-fluid about-img fade-in" title="Stellxr Kerala Web Design Agency" style="border-radius: 30px; box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4); animation: fadeInRight 1s;">
-            </div>
-        
-        </div>
-    </div>
-</section>
-
-<style>
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes fadeInRight {
-        from {
-            opacity: 0;
-            transform: translateX(-30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.05);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-
-    @keyframes progressWidth {
-        0% {
-            width: 0;
-        }
-        100% {
-            width: 95%;
-        }
-    }
-</style>
-
-
-
-
-<section class="about-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- About Text -->
-            <div class="col-lg-6">
-                <img src="Untitled design (8).png" alt="Stellxr Poster Designing in Kerala" title="Poster Designing by Stellxr - Leading Kerala Web Design Agency" class="img-fluid about-img fade-in">
-            </div>
-          
-            <div class="col-lg-6 about-text">
-                <h2><span class="badge bg-success">60% off now</span><br>Stellxr: Exceptional Poster Designing in Kerala at Unbeatable Prices</h2>
-                <p>
-                    Stellxr is a pioneering Kerala-based company renowned for its exceptional poster designing services. We pride ourselves on delivering high-quality posters that not only captivate the audience but also effectively convey the intended message. Despite our unwavering commitment to excellence, we remain dedicated to affordability, ensuring that our clients receive the best value for their investment. At Stellxr, we believe that top-notch design shouldn't come with a hefty price tag, and thus we offer our unparalleled poster designing services at a very low cost. With our talented team of designers and a customer-centric approach, Stellxr is the go-to choice for businesses and individuals seeking outstanding posters without breaking the bank.
-                </p>
-                <b><p>Design</p></b>
-                <div class="progress">
-                    <div class="progress-bar" style="width:95%"></div>
-                </div>
-                <b><p>Uniqueness</p></b>
-                <div class="progress">
-                    <div class="progress-bar" style="width:100%"></div>
-                </div>
-                <b><p>Affordability</p></b>
-                <div class="progress">
-                    <div class="progress-bar" style="width:100%"></div>
-                </div>
-                <b><p>Fast Delivery</p></b>
-                <div class="progress">
-                    <div class="progress-bar" style="width:85%"></div>
-                </div>
-                <br>
-                <a href="https://api.whatsapp.com/send/?phone=919037452346&text&type=phone_number&app_absent=0"><button type="button" class="btn btn-outline-primary">Learn more about our posters</button></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-</div>
- 
-
-
-<div class="container-fluid">
-    <div class="row" style="background-color: rgb(0, 89, 255);">
-        <div class="col-6 col-sm-3" style="background-color: rgb(0, 89, 255); color:white">
-            <div class="service">
-                <img src="https://cdn.dribbble.com/users/295352/screenshots/1015226/voov_anim_anvil_01.gif" alt="Web Designing" title="Web Designing by Stellxr - Kerala Web Design Agency">
-                <h3 class="text-center">Web Designing</h3>
-                <p class="text-center">Stellxr, a leading Kerala web design agency, creates stunning and responsive websites that help your business stand out online.</p>
-            </div>
-        </div>
-        <div class="col-6 col-sm-3" style="background-color: rgb(0, 89, 255); color:white">
-            <div class="service">
-                <img src="https://cdn.dribbble.com/users/1699373/screenshots/6961028/poster_gif.gif" alt="Poster Designing" title="Poster Designing by Stellxr - Kerala Web Design Agency">
-                <h3 class="text-center">Poster Designing</h3>
-                <p class="text-center">Stellxr specializes in designing eye-catching posters and graphics to promote your brand and events effectively.</p>
-            </div>
-        </div>
-        <div class="col-6 col-sm-3" style="background-color: rgb(0, 89, 255); color:white">
-            <div class="service">
-                <img src="https://i.pinimg.com/originals/98/3b/63/983b63592a42295d638b4b3120df9cc8.gif" alt="AI Solutions" title="AI Solutions by Stellxr - Kerala Web Design Agency">
-                <h3 class="text-center">AI Solutions</h3>
-                <p class="text-center">Stellxr leverages the latest AI technologies to develop intelligent solutions that automate and enhance your business processes.</p>
-            </div>
-        </div>
-        <div class="col-6 col-sm-3" style="background-color: rgb(0, 89, 255); color:white">
-            <div class="service">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/09804a82963291.5d308c3850e2c.gif" alt="Mobile Apps" title="Mobile Apps by Stellxr - Kerala Web Design Agency">
-                <h3 class="text-center">Mobile Apps</h3>
-                <p class="text-center">Get your own premium app from Stellxr, a top Kerala web design agency, at an affordable rate that is well designed and optimized.</p>
-            </div>
+        <!-- Right Image -->
+        <div class="col-md-4 no-padding">
+            <img src="headerimg (1).png" alt="Right Image" class="img-fluid w-100">
         </div>
     </div>
 </div>
-
-
-<br><br><br><br><br><br><br>
-<section class="about-section" style="margin-top: -90px;">
+<br><br><br><br><br><section class="about-section" style="margin-top: -90px; border-bottom: 1px solid black; background-color: #f4f4f4;">
     <div class="container">
         <div class="row align-items-center">
             <!-- About Text -->  <div class="col-lg-6">
@@ -387,357 +563,127 @@
 </section>
 
     </div>
+
+
+
+    <section class="about-section" style="background-color: #000; color: #fff; padding: 50px 0;">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <!-- About Text -->    
+                <div class="col-lg-6">
+                    <h2 style="font-size: 2rem; font-weight: 800; line-height: 1.3;"><span class="badge bg-success" style="font-size: 1.5rem; padding: 8px 16px;">Limited Time Offer!</span><br>Stellxr: The Pioneering Kerala Web Design Agency</h2>
+                    <p style="font-size: 15px; line-height: 1.8;">
+                        Stellxr is not just another web design agency; we are innovators in website personalization. We bring the magic of seasonal adaptability to your website, dynamically changing its theme to reflect the current season. Elevate your website with Stellxr and keep your audience engaged and coming back for more.
+                    </p>
+                    
+                    <h3 style="font-size: 2rem; font-weight: 700; margin-top: 40px;">Why Choose Stellxr?</h3>
+                    
+                    <div class="progress mb-4" style="height: 15px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.1);">
+                        <div class="progress-bar bg-info" style="width:95%; border-radius: 20px; font-size:.8rem; font-weight: 600; padding: 8px 16px;">Web Design</div>
+                    </div>
+                    
+                    <div class="progress mb-4" style="height: 15px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.1);">
+                        <div class="progress-bar bg-warning" style="width:100%; border-radius: 20px; font-size:.8rem; font-weight: 600; padding: 8px 16px;">Responsive</div>
+                    </div>
+                    
+                    <div class="progress mb-4" style="height: 15px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.1);">
+                        <div class="progress-bar bg-success" style="width:85%; border-radius: 20px; font-size:.8rem; font-weight: 600; padding: 8px 16px;">Customization</div>
+                    </div>
+                    
+                    <div class="progress mb-4" style="height: 15px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.1);">
+                        <div class="progress-bar bg-danger" style="width:75%; border-radius: 20px; font-size:.8rem; font-weight: 600; padding: 8px 16px;">AI Integration</div>
+                    </div>
+                    
+                    <a href="page2.html" class="btn btn-primary btn-lg" style="font-size:.8rem; font-weight: 700; padding: 8px 24px;">Discover Our Services</a>
+                </div>
+    
+                <!-- About Image -->
+                <div class="col-lg-6">
+                    <img src="stell.jpeg" alt="Stellxr Kerala Web Design Agency" class="img-fluid about-img fade-in" style="border-radius: 20px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);">
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="about-section" style="background-color:rgb(255, 255, 255); padding: 20px 0;">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <!-- About Text -->    
+                <div class="col-lg-6">
+                    <img src="Untitled design (6).gif" alt="Stellxr Poster Designing in Kerala" title="Poster Designing by Stellxr - Leading Kerala Web Design Agency" class="img-fluid about-img fade-in" style="border-radius: 12px; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);">
+                </div>
+                
+                <div class="col-lg-6" style="color: rgb(0, 0, 0);">
+                    <h2><span class="badge bg-success" style="font-size: 1rem; padding: 5px 10px;">60% off</span><br>Stellxr: Exceptional Poster Designing in Kerala at Unbeatable Prices</h2>
+                    <p style="font-size: 0.8rem; line-height: 1.5;">
+                        Stellxr is a Kerala-based company renowned for its exceptional poster designing services. We pride ourselves on delivering high-quality posters that not only captivate the audience but also effectively convey the intended message. Despite our unwavering commitment to excellence, we remain dedicated to affordability, ensuring that our clients receive the best value for their investment.
+                    </p>
+                    
+                    <b><p style="font-size: 0.8rem;">Design</p></b>
+                    <div class="progress mb-2" style="height: 7px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.1);">
+                        <div class="progress-bar" style="width:95%; background-color: #ce2cda; border-radius: 10px;"></div>
+                    </div>
+                    
+                    <b><p style="font-size: 0.8rem;">Uniqueness</p></b>
+                    <div class="progress mb-2" style="height: 7px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.1);">
+                        <div class="progress-bar" style="width:100%; background-color: #ce2cda; border-radius: 10px;"></div>
+                    </div>
+                    
+                    <b><p style="font-size: 0.8rem;">Affordability</p></b>
+                    <div class="progress mb-2" style="height: 7px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.1);">
+                        <div class="progress-bar" style="width:100%; background-color: #ce2cda; border-radius: 10px;"></div>
+                    </div>
+                    
+                    <b><p style="font-size: 0.8rem;">Fast Delivery</p></b>
+                    <div class="progress mb-2" style="height: 7px; border-radius: 10px; background-color: rgba(0, 0, 0, 0.1);">
+                        <div class="progress-bar" style="width:85%; background-color: #ce2cda; border-radius: 10px;"></div>
+                    </div>
+                    
+                    <a href="https://api.whatsapp.com/send/?phone=919037452346&text&type=phone_number&app_absent=0" class="btn btn-outline-primary btn-sm" style="font-size: 0.8rem; font-weight: 600; padding: 3px 12px;">Learn more</a>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <div style="border-bottom: 1px solid black;"></div>
+</section>    <section class="about-section" style=" background-color:#ffffff; ">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- About Image -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="Copy of Untitled Design.gif" 
+                     alt="Stellxr Web Development Company in Kannur, Kerala" 
+                     class="img-fluid fade-in" 
+                     title="Stellxr Web Development Company in Kannur, Kerala">
+            </div>
+
+            <!-- About Text -->
+            <div class="col-lg-6 about-text order-lg-1" >
+                <div >
+                    <h2 class="mb-4">About Stellxr: Leading Web Development Company in Kannur, Kerala</h2>
+                   <b><p style="font-size: 15px; color: black;" >
+                        Stellxr is a leading web development company based in Kannur, Kerala, with over 20 years of industry experience and a portfolio boasting over 1000 successful projects. Specializing in custom website development, e-commerce solutions, PHP, Laravel, and WordPress development, we fuse creativity with advanced technology to create websites that are visually appealing and SEO-optimized. Committed to transforming businesses, we offer meticulously designed social media marketing campaigns to enhance your brand's online visibility and ranking.
+                    </p></b> 
+                    <a href="a.html" class="btn btn-outline-dark mt-4">Learn more about us <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<br><br><br><br><div class="container mt-5">
-    <div class="row">
-        <!-- Google Review -->
-        <div class="col-md-4 col-12 mb-3 text-center">
-            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="google-logo">
-            <h2 class="mt-3">Google Review</h2>
-            <div class="rating mt-3">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </div>
-        </div>
-        
-        <!-- Just Dial Review -->
-        <div class="col-md-4 col-12 mb-3 text-center">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcI_TdIGltI0bRIlvpyCbodxnq-Ibct6IPy6sgQa65&s" alt="Just Dial Logo" class="justdial-logo" style="height: 55px;">
-            <h2 class="mt-3">Just Dial Review</h2>
-            <div class="rating mt-3">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </div>
-        </div>
-        
-        <!-- Apple Review -->
-        <div class="col-md-4 col-12 mb-3 text-center">
-            <img src="https://asset.brandfetch.io/idPOwEFBdW/idl_lgL5cu.png" alt="Apple Logo" class="apple-logo" style="height: 55px;">
-            <h2 class="mt-3">Bark Review</h2>
-            <div class="rating mt-3">
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-                <i class="fas fa-star" aria-hidden="true"></i>
-            </div>
-        </div>
-    </div>
-</div>
 
-
-<br><br><br><br><br><br><br><br> <div style="background-color: white;">
-    <section id="portfolio" class=" py-5">
-        <div class="container">
-          <h2 class="text-center mb-4">Our Portfolio - Web Design and Graphic Design in Kerala</h2>
-      
-          <!-- Portfolio Filters -->
-          <div class="text-center mb-4">
-            <button class="btn btn-outline-dark active" data-filter="all">All</button>
-            <button class="btn btn-outline-dark" data-filter="web">Web Design</button>
-            <button class="btn btn-outline-dark" data-filter="graphic">Graphic Design</button>
-          </div>
-      
-          <!-- Portfolio Items -->
-          <div class="row">
-            <!-- Item 1 -->
-            <div class="col-md-4 portfolio-item web">
-              <div class="card">
-                <img src="https://pxl.stellxr.in/rain.png" class="card-img-top" alt="Web Design for Rainbow edupark by Stellxr - Kerala Web Design Agency" title="Web Design for Rainbow edupark by Stellxr - Leading Kerala Web Design Agency">
-                <div class="card-body">
-                  <h5 class="card-title">Website for Rainbow edupark</h5>
-                  <p class="card-text">This is a website made for a tuition center.</p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Item 2 -->
-            <div class="col-md-4 portfolio-item web">
-              <div class="card">
-                <img src="https://pxl.stellxr.in/stell.png" class="card-img-top" alt="Web Design for Stella by Stellxr - Kerala Web Design Agency" title="Web Design for Stella by Stellxr - Leading Kerala Web Design Agency">
-                <div class="card-body">
-                  <h5 class="card-title">Website for Stella</h5>
-                  <p class="card-text">Website made for an AI company.</p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Item 3 -->
-            <div class="col-md-4 portfolio-item web">
-              <div class="card">
-                <img src="pxweb.png" class="card-img-top" alt="Web Design for Pixeloutfitter by Stellxr - Kerala Web Design Agency" title="Web Design for Pixeloutfitter by Stellxr - Leading Kerala Web Design Agency">
-                <div class="card-body">
-                  <h5 class="card-title">Website for Pixeloutfitter</h5>
-                  <p class="card-text">A website for a creative agency.</p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Additional Portfolio Items -->
-            <!-- Item 4 -->
-            <div class="col-md-4 portfolio-item graphic" style="display: none;">
-              <div class="card">
-                <img src="https://img.freepik.com/free-vector/realistic-banner-template-onam-celebration_23-2149516031.jpg?t=st=1712762938~exp=1712766538~hmac=8864a9afffc48544f3e49aaba05a29fd45bcdac3c9ce97128f3988166054ab9f&w=1060" class="card-img-top" alt="Graphic Design Poster Template by Stellxr - Kerala Web Design Agency" title="Graphic Design Poster Template by Stellxr - Leading Kerala Web Design Agency">
-                <div class="card-body">
-                  <h5 class="card-title">Poster Template made by us</h5>
-                  <p class="card-text">Get your own poster like this at just Rs:60.</p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Item 5 -->
-            <div class="col-md-4 portfolio-item graphic" style="display: none;">
-              <div class="card">
-                <img src="https://img.freepik.com/free-vector/gradient-business-horizontal-banner_23-2149695712.jpg?t=st=1712763023~exp=1712766623~hmac=c6dab95669ecb5fb9db3ea8b54eaffb6cd8c22906c72be3b70a7089fa8405cbc&w=1060" class="card-img-top" alt="Graphic Design Poster Template by Stellxr - Kerala Web Design Agency" title="Graphic Design Poster Template by Stellxr - Leading Kerala Web Design Agency">
-                <div class="card-body">
-                    <h5 class="card-title">Poster Template made by us</h5>
-                    <p class="card-text">Get your own poster like this at just Rs:60.</p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Item 6 -->
-            <div class="col-md-4 portfolio-item graphic" style="display: none;">
-              <div class="card">
-                <img src="https://img.freepik.com/free-vector/webinar-template-hotel-business_23-2150253088.jpg?t=st=1712763137~exp=1712766737~hmac=363504d96a09570f41ef23ed914460b45d805d123e07b9df264556c736586805&w=1060" class="card-img-top" alt="Graphic Design Poster Template by Stellxr - Kerala Web Design Agency" title="Graphic Design Poster Template by Stellxr - Leading Kerala Web Design Agency">
-                <div class="card-body">
-                    <h5 class="card-title">Poster Template made by us</h5>
-                    <p class="card-text">Get your own poster like this at just Rs:60.</p>
-                </div>
-              </div>
-            </div>
-      
-          </div><!-- End Row -->
-        </div><!-- End Container -->
-      </section>
-    </div>
-
-    
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        const filterButtons = document.querySelectorAll('[data-filter]');
-      
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filterValue = button.getAttribute('data-filter');
-      
-                portfolioItems.forEach(item => {
-                    item.style.display = 'none';
-                    if (item.classList.contains(filterValue) || filterValue === 'all') {
-                        item.style.display = 'block';
-                    }
-                });
-      
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-            });
-        });
-    });
-</script>
-<footer class="text-center text-lg-start bg-body-tertiary text-muted" >
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block"></div>
-        <!-- Left -->
-  
-        <!-- Right -->
-        <div>
-            <a href="" class="me-4 text-reset"><i class="fab fa-facebook-f"></i></a>
-            <a href="" class="me-4 text-reset"><i class="fab fa-twitter"></i></a>
-            <a href="" class="me-4 text-reset"><i class="fab fa-google"></i></a>
-            <a href="" class="me-4 text-reset"><i class="fab fa-instagram"></i></a>
-            <a href="" class="me-4 text-reset"><i class="fab fa-linkedin"></i></a>
-            <a href="" class="me-4 text-reset"><i class="fab fa-github"></i></a>
-        </div>
-        <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-  
-    <!-- Section: Links  -->
-    <section class="">
-        <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <!-- Content -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"><img src="logoreal.png" alt="" style="height: 50px;"></i>Stellxr
-                    </h6>
-                    <p>
-                        "We're not just in the business of technology; we're in the business of reimagining the future. Every invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our DNA."
-                    </p>
-                </div>
-                <!-- Grid column -->
-  
-                <!-- Grid column -->
-         
-                <!-- Grid column -->
-  
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        Useful links
-                    </h6>
-                    <p>
-                        <a href="https://wa.me/919037452346" class="text-reset">Contact</a>
-                    </p>
-                    <p>
-                        <a href="page2.html" class="text-reset">Webdesign</a>
-                    </p>
-                    <p>
-                        <a href="a.html" class="text-reset">About us</a>
-                    </p>
-                    <p>
-                        <a href="e.html" class="text-reset">Events</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
-  
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p><i class="fas fa-home me-3"></i> Aniyaram po 670672</p>
-                    <p>
-                        <i class="fas fa-envelope me-3"></i>
-                        tech.stellxr@gmail.com
-                    </p>
-                    <p><i class="fas fa-phone me-3"></i> +91 9037452346</p>
-                </div>
-                <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-        </div>
-    </section>
-    <!-- Section: Links  -->
-  
-<!-- The Modal -->
-<div class="cursor"></div>
-<div class="cursor2"></div>
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <img src="vishu.jpeg" alt="Sample Image" class="modal-img">
-        <h2>Happy Vishu to stellxr family</h2>
-        <p></p>
-    </div>
-</div>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/661be1f3a0c6737bd12ba5c9/1hreel9i6';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2024 Copyright:
-        <a class="text-reset fw-bold" href="index.html">stellxr   <br> version:1.00</a>
-    </div>
-    <!-- Copyright -->
-</footer>
-<script>// UPDATE: I was able to get this working again... Enjoy!
-
-    var cursor = document.querySelector('.cursor');
-    var cursorinner = document.querySelector('.cursor2');
-    var a = document.querySelectorAll('a');
-    
-    document.addEventListener('mousemove', function(e){
-      var x = e.clientX;
-      var y = e.clientY;
-      cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-    });
-    
-    document.addEventListener('mousemove', function(e){
-      var x = e.clientX;
-      var y = e.clientY;
-      cursorinner.style.left = x + 'px';
-      cursorinner.style.top = y + 'px';
-    });
-    
-    document.addEventListener('mousedown', function(){
-      cursor.classList.add('click');
-      cursorinner.classList.add('cursorinnerhover')
-    });
-    
-    document.addEventListener('mouseup', function(){
-      cursor.classList.remove('click')
-      cursorinner.classList.remove('cursorinnerhover')
-    });
-    
-    a.forEach(item => {
-      item.addEventListener('mouseover', () => {
-        cursor.classList.add('hover');
-      });
-      item.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover');
-      });
-    })</script>
-
-<script>
-    // Get the modal element
-    var modal = document.getElementById("myModal");
-
-    // Get the close button
-    var closeBtn = document.getElementsByClassName("close-btn")[0];
-
-    // When the page loads, open the modal
-    window.onload = function() {
-        modal.style.display = "block";
-    }
-
-    // Close the modal when the close button is clicked
-    closeBtn.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // Close the modal when clicking outside the modal content
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // Preloader
-    window.addEventListener("load", function () {
-        const preloader = document.querySelector('.preloader');
-        preloader.style.display = 'none';
-    });
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_TRACKING_ID');
-</script> 
-<script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Bootstrap JS and Popper.js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>

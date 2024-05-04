@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attractive Branding Section</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa; /* Light gray background color */
+    }
+
+    .custom-section {
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff; /* White background color */
+      overflow: hidden; /* Clear floats */
+    }
+
+    .custom-section h1 {
+      font-size: 2.5rem;
+      color: #333; /* Dark text color */
+      margin-bottom: 20px;
+    }
+
+    .custom-section p {
+      font-size: 1.25rem;
+      color: #555; /* Medium text color */
+      line-height: 1.6;
+    }
+
+    .custom-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+    }
+
+    /* Media queries for smaller screens */
+    @media (max-width: 768px) {
+      .custom-section h1 {
+        font-size: 2rem;
+      }
+
+      .custom-section p {
+        font-size: .75rem;
+        text-align: justify;
+      }
+    }
+  </style>
+   <style>
+    /* Custom CSS for gradient background */
+    .gradient-section {
+      background: linear-gradient(to right, #ce2cda, #8329d9);
+      color: #fff;
+      text-align: center;
+      padding: 150px 0; /* Increased padding for more height */
+    }
+    /* Beautification styles */
+    .section-content {
+      max-width: 600px; /* Limiting content width */
+      margin: 0 auto; /* Centering content */
+    }
+    .section-heading1 {
+      font-size: 36px; /* Larger heading font size */
+      margin-bottom: 20px; /* Space below heading */
+    }
+    .section-subtext {
+      font-size: 18px; /* Subtext font size */
+      margin-bottom: 40px; /* Space below subtext */
+    }
+
+    .color:nth-child(1) {
+background: #3c2bdb;
+}
+
+.color:nth-child(2) {
+background: #8329d9;
+}
+
+.color:nth-child(3) {
+background: #ce2cda;
+}
+
+.color:nth-child(4) {
+background: #ffffff;
+}
+
+.color:nth-child(5) {
+background: #000000;
+}
+.gradient-section {
+      background: linear-gradient(to right, #8329d9, #ce2cda);
+      color: #fff;
+      text-align: center;
+      padding: 100px 0; /* Adjusted padding */
+    }
+    /* Beautification styles */
+    .section-content {
+      max-width: 800px; /* Increased max-width */
+      margin: 0 auto; /* Centering content */
+    }
+    .section-heading {
+      font-size: 42px; /* Increased heading font size */
+      margin-bottom: 20px; /* Space below heading */
+    }
+    .section-subtext {
+      font-size: 16px; /* Decreased subtext font size */
+      margin-bottom: 30px; /* Adjusted space below subtext */
+    }
+ 
+    
+    .circle-button {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .big-box {
+      width: 80%;
+      max-width: 500px;
+      height: 300px;
+      border: 2px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      transition: background-color 0.5s ease; /* Added transition effect */
+    }
+    #logo {
+      max-width: 80%;
+      max-height: 80%;
+    }
+    .main-logo-heading {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .box {
+      border: 2px solid #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      margin: 10px;
+    }
+    #logo1 {
+      width: 100%; /* Set width to fill the container */
+      height: 200px; /* Set a fixed height */
+      object-fit: contain; /* Maintain aspect ratio and fit inside the box */
+    }
+    .box-text {
+      text-align: center;
+      margin-top: 10px;
+    }
+    /* Add custom heading style */
+    .section-heading {
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333; /* Adjust color as needed */
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Custom styling for textarea */
+    #exampleTextarea {
+      font-family: 'Poppins', sans-serif;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ced4da;
+    }.logo-img {
+  width: 100%;
+  height: auto;
+}
+
+
+.illustration-img {
+      width: 100%;
+      height: auto;
+    }
+    .artist-text {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+
+
+    .parallax-container {
+        position: relative;
+        height: 500px; /* Adjust height as needed */
+        overflow: hidden;
+    }
+    
+    /* Parallax image */
+    .parallax-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://images.pexels.com/photos/8145335/pexels-photo-8145335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Replace 'your-image.jpg' with your image path */
+        background-size: cover;
+        background-position: center;
+        filter: grayscale(100%) brightness(0.5); /* Add black overlay */
+          /* Set a specific height */
+  min-height: 500px; 
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+    }
+    
+    /* Centered text quote */
+    .quote {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="font-size: 10px; font-family: 'SF Pro Display', sans-serif;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="https://github.com/stellxr-tech/stellxrreal/blob/main/logoreal.png?raw=true" alt="Logo" height="30"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page2.html">Website</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="a.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="e.html">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://api.whatsapp.com/send/?phone=919037452346&text&type=phone_number&app_absent=0">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <div class="custom-section">
+        <h1>What is Branding?</h1>
+        <p>Branding is the process of creating a distinct identity for a product, service, company, or individual. It involves crafting a unique name, logo, design, and overall image that sets it apart from competitors and communicates its values, personality, and offerings to the target audience. Effective branding creates recognition, builds trust, and fosters customer loyalty. It's not just about the visual elements but also about the overall experience and perception associated with the brand. This can include everything from the messaging used in marketing materials to the way customer service representatives interact with clients.</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="https://images.pexels.com/photos/7552373/pexels-photo-7552373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="img-fluid" alt="Placeholder Image">
+    </div>
+  </div>
+</div>
+<br><br><br><div class="container">
+    <div class="row align-items-center">
+        <!-- About Text -->  
+        <div class="col-lg-6">
+            <center> 
+                <div class="container11">
+                    <div class="palette">
+                        <div class="color" data-color="#264653"><span>264653</span></div>
+                        <div class="color" data-color="#2A9D8F"><span>2A9D8F</span></div>
+                        <div class="color" data-color="#E9C46A"><span>E9C46A</span></div>
+                        <div class="color" data-color="#F4A261"><span>F4A261</span></div>
+                        <div class="color" data-color="#E76F51"><span>E76F51</span></div>
+                    </div>
+                    <div id="stats">
+                        <span>Colour palette for business</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <path d="M4 7.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5S5.5 9.83 5.5 9 4.83 7.5 4 7.5zm10 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm-5 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5S9.83 7.5 9 7.5z"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+            </center>  
+        </div>
+        
+        <div class="col-lg-6 about-text">
+          
+            <h2>Color Palette</h2>
+            <p style="font-size: 15px;">
+                In branding, a color palette serves as the visual foundation of a brand's identity, encapsulating its personality, values, and differentiation in a concise selection of colors. Carefully curated to resonate with the target audience, these colors evoke specific emotions and associations while ensuring consistency across diverse platforms and materials. From the bold hues of a tech startup to the serene tones of a wellness brand, each palette is meticulously crafted to convey the essence of the brand and forge a lasting connection with consumers, reinforcing recognition and trust while fostering a memorable brand experience across every touchpoint.
+            </p>
+            <a href="a.html"><button type="button" class="btn btn-outline-dark">Learn more about us</button></a>
+        </div>
+    </div>
+</div>
+</section>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <img src="oglite.png" alt="Square Image" class="img-fluid square-img">
+        <h2 class="mt-3">Logo</h2>
+        <p>Logos are like a brand's face—they're the first thing people notice and help them recognize and remember the brand. Think of them as a quick way to show what a brand is about and what it stands for. A good logo makes a brand look trustworthy and unique, helping it stand out from the competition. It's a key part of building a strong connection with customers and making a brand successful..</p>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br> <div class="container">
+    <h2 class="section-heading"> Logo Variations</h2> <!-- Added heading -->
+    <div class="row">
+      <div class="col-md-3">
+        <div class="box">
+          <img src="oglite.png" class="logo-img" alt="Normal logo">
+          <p class="box-text">Normal logo</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="box">
+          <img src="ogdark.png" class="logo-img" alt="Logo for dark version">
+          <p class="box-text">Dark logo</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="box">
+          <img src="puredark.png" class="logo-img" alt="Pure dark logo">
+          <p class="box-text">Pure dark logo</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="box">
+          <img src="70a4c89b-deed-4e32-998c-e79e390bd76f.jpg" class="logo-img" alt="Dark logo alternative">
+          <p class="box-text">Dark extreme</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax-image"></div>
+    <div class="quote">
+        <h4>Your brand is what other people say about you when you're not in the room
+        <p></p>
+    </div>
+</div>
+
+<section class="about-section" style="background-color: #f8f9fa; color: #000000; padding: 50px 0;">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <!-- About Text -->    
+            <div class="col-lg-6">
+                <h2 style="font-size: 2rem; font-weight: 800; line-height: 1.3;"><span class="badge bg-success" style="font-size: 1.5rem; padding: 8px 16px;">Limited Time Offer!</span><br>Website development</h2>
+                <p style="font-size: 15px; line-height: 1.8;">
+                  A website serves as the digital face of a brand, offering a platform to convey its identity, values, and offerings to a global audience. In today's digital age, where online presence is paramount, a well-designed website is crucial for establishing credibility, building trust, and engaging with customers. It provides a centralized hub for showcasing products or services, sharing compelling content, and facilitating seamless interactions. Moreover, a professionally crafted website enhances brand recognition and differentiation, helping businesses stand out in a competitive market. By prioritizing user experience and consistent branding elements, a website becomes a powerful tool for shaping perceptions, fostering loyalty, and ultimately driving business growth.
+                </p>
+                
+                <h3 style="font-size: 2rem; font-weight: 700; margin-top: 40px;">Why Choose Stellxr?</h3>
+                
+                <div class="progress mb-4" style="height: 15px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.1);">
+                    <div class="progress-bar bg-info" style="width:95%; border-radius: 20px; font-size:.8rem; font-weight: 600; padding: 8px 16px;">Web Design</div>
+                </div>
+                
+                <div class="progress mb-4" style="height: 15px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.1);">
+                    <div class="progress-bar bg-warning" style="width:100%; border-radius: 20px; font-size:.8rem; font-weight: 600; padding: 8px 16px;">Responsive</div>
+                </div>
+                
+                <div class="progress mb-4" style="height: 15px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.1);">
+                    <div class="progress-bar bg-success" style="width:85%; border-radius: 20px; font-size:.8rem; font-weight: 600; padding: 8px 16px;">Customization</div>
+                </div>
+                
+                <div class="progress mb-4" style="height: 15px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.1);">
+                    <div class="progress-bar bg-danger" style="width:75%; border-radius: 20px; font-size:.8rem; font-weight: 600; padding: 8px 16px;">AI Integration</div>
+                </div>
+                
+              
+            </div>
+
+            <!-- About Image -->
+            <div class="col-lg-6">
+                <img src="stell.jpeg" alt="Stellxr Kerala Web Design Agency" class="img-fluid about-img fade-in" style="border-radius: 20px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);">
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+  <br><br><br><div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="text-center"> Illustrations</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <img src="headerimg (1).png" class="illustration-img img-fluid" alt="Illustration 1">
+        <p class="artist-text">Drawn by Happy Cub Artist</p>
+      </div>
+      <div class="col-md-3">
+        <img src="headerimg (2).png" class="illustration-img img-fluid" alt="Illustration 2">
+        <p class="artist-text">Drawn by Happy Cub Artist</p>
+      </div>
+      <div class="col-md-3">
+        <img src="alt1 (1).png" class="illustration-img img-fluid" alt="Illustration 3">
+        <p class="artist-text">Drawn by Happy Cub Artist</p>
+      </div>
+      <div class="col-md-3">
+        <img src="alt1 (2).png" class="illustration-img img-fluid" alt="Illustration 4">
+        <p class="artist-text">Drawn by Happy Cub Artist</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <img src="Untitled design (8).gif" class="img-fluid d-block mx-auto"style="max-width: 100%; max-height: 100%;" alt="Image">
+        <h2 class="text-center mt-4">We design your showrooms...!!!</h2>
+        <p class="text-center">Our team will help to build your showroom with a unique brand identity. and your showroom will stand out from everyother one's in your field</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <img src="Untitled design (15).png" class="img-fluid d-block mx-auto"style="max-width: 100%; max-height: 100%;" alt="Image">
+        <h2 class="text-center mt-4">Socal media marketing</h2>
+        <p class="text-center">Our team will help you build a unique social media identity and your brand will stand out from all other brands when its designed by us</p>
+      </div>
+    </div>
+  </div>
+<script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var scrollTop = $(window).scrollTop();
+            $('.parallax-image').css('top', -(scrollTop * 0.5) + 'px');
+        });
+    });
+</script>
+<footer style="background-color: black; color: white; text-align: center; padding: 20px 0;">
+  <div class="container">
+      <img src="https://github.com/stellxr-tech/stellxrreal/blob/main/logoreal.png?raw=true" alt="Logo" height="40" >
+      <br><p style="margin-bottom: 10px; font-size: 18px; letter-spacing: 1px;">Coding the future, one line at a time! ⭐</p>
+      <p style="margin-bottom: 0; font-size: 14px;">@all rights reserved. stellxr</p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

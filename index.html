@@ -9,599 +9,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts - Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
  
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
 
-        .purple-gradient-bg {
-            background: linear-gradient(135deg, #ce2cda, #8329d9);
-            color: #ffffff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .no-padding {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .increase-height {
-            min-height: 500px;
-        }
-
-        h2 {
-            font-weight: 700;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-weight: 500;
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        .btn-warning {
-            background-color: #fcb900;
-            border-color: #fcb900;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .btn-warning:hover {
-            background-color: #ffcc00;
-            border-color: #ffcc00;
-        }
-             .header {
-            background-image: url('https://via.placeholder.com/1500x500'); /* Replace with your image URL */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-        }
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .header p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-        }
-        .header .btn {
-            font-size: 1.5rem;
-        }.hero-section {
-  position: relative;
-  width: 100%;
-  height: 75vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: url('https://images.unsplash.com/photo-1516972810927-80185027ca84') no-repeat center center/cover;
-}
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8));
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: #ffffff;
-}
-
-.hero-title {
-  font-size: 4.5em;
-  margin-bottom: 0.8em;
-  letter-spacing: 3px;
-  animation: fadeInDown 1s ease-out;
-}
-
-.hero-subtitle {
-  font-size: 2em;
-  margin-bottom: 1.5em;
-  animation: fadeInUp 1s ease-out;
-}
-
-.hero-button {
-  padding: 1em 2.5em;
-  font-size: 1.3em;
-  background-color: #8329d9;
-  color: #ffffff;
-  border: none;
-  border-radius: 40px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: bounceIn 1s ease-out;
-  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
-}
-
-.hero-button:hover {
-  background-color: #ce2cda;
-  transform: scale(1.08);
-  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
-}
-
-@media screen and (max-width: 768px) {
-
-
-  .hero-title {
-    font-size: 4.5em;
-    margin-bottom: 0.8em;
-    letter-spacing: 3px;
-    animation: fadeInDown 1s ease-out;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.5em;
-    max-width: 5px;
-  
-  }
-
-}
-
-
-
-
-
-
-.container11 {
-    height: 200px;
-    width: 350px;
-    border-radius: 1em;
-    overflow: hidden;
-    box-shadow: 0 10px 20px #dbdbdb;
-    font-family: sans-serif;
-  }
-  
-  .palette {
-    display: flex;
-    height: 86%;
-    width: 100%;
-  }
-  
-  .color {
-    height: 100%;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: flex 0.1s linear;
-  }
-  
-  .color span {
-    opacity: 0;
-    transition: opacity 0.1s linear;
-  }
-  
-  .color:nth-child(1) {
-    background: #264653;
-  }
-  
-  .color:nth-child(2) {
-    background: #2a9d8f;
-  }
-  
-  .color:nth-child(3) {
-    background: #e9c46a;
-  }
-  
-  .color:nth-child(4) {
-    background: #f4a261;
-  }
-  
-  .color:nth-child(5) {
-    background: #e76f51;
-  }
-  
-  .color:hover {
-    flex: 2;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  }
-  
-  .color:hover span {
-    opacity: 1;
-  }
-  
-  #stats {
-    height: 14%;
-    width: 100%;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5em;
-    box-sizing: border-box;
-    color: #bebebe;
-  }
-  
-  #stats svg {
-    fill: #bebebe;
-    transform: scale(1.2);
-  }
-
-
-
-  
-.top-bar {
-  background-color: #ce2cda;
-  color: #ffffff;
-  padding: 1rem 10rem;
-}
-
-.navbar {
-  background-color: #ffffff;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-.navbar-brand {
-  font-weight: 600;
-  color: #000;
-}
-
-.navbar-nav .nav-link {
-  color: #000000;
-  font-weight: 500;
-  margin-right: 20px;
-  font-size: 15px;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #ce2cda;
-}
-
-.navbar.fixed-top {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}.memo{
-  font-size: 20px;
-}
-
-.kiddo{
-  font-size: 60px;
-}
-@media screen and (max-width: 768px) {
-  .carousel-item img {
-      height: 200px;
-      object-fit: cover;
-  }
-
-  .top-bar {
-      padding: 0.5rem 1rem;
-  }
-
-  .navbar-brand {
-      font-size: 1.5em;
-  }
-
-  .navbar-nav .nav-link {
-      margin-right: 10px;
-  }
-}.about-section {
-
-  padding: 80px 0;
-
-}
-
-.about-img {
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.about-img:hover {
-  transform: scale(1.05);
-}
-
-.about-text h2 {
-  color: #333;
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 25px;
-  transition: color 0.3s ease;
-}
-
-.about-text h2:hover {
-  color: #007bff;
-}
-
-.font-size-lg {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #666;
-}
-
-.btn-outline-dark {
-  border-color: #343a40;
-  color: #343a40;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  font-weight: 500;
-}
-
-.btn-outline-dark:hover {
-  background-color: #343a40;
-  color: #ffffff;
-}
-
-.btn-outline-dark:hover .fa-arrow-right {
-  transform: translateX(5px);
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
-}
-
-.about-content {
-
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.fa-arrow-right {
-  transition: transform 0.3s ease;
-}.services-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  background-color: #ffffff;
-  flex-wrap: wrap;
-}
-
-.service {
-  flex: 1;
-  max-width: 300px;
-  text-align: center;
-  margin: 15px;
-}
-
-.service img {
-  width: 80%;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.mission-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 80px;
-  background-color: #fff;
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
-}
-
-.mission-section img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 30px;
-}
-
-.mission-content {
-  text-align: center;
-  padding: 0 50px;
-}
-
-.mission-content h2 {
-  font-size: 3em;
-  margin-bottom: 30px;
-}
-
-.mission-content p {
-  font-size: 1.5em;  
-  margin-bottom: 30px;
-}
-
-/*service section end*/
-
-
-
-/*abt section start*/
-.about-section {
-  padding: 80px 0;
-  background-color: #ffffff;
-}
-
-.about-text {
-  padding-right: 50px;
-}
-
-.about-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #666;
-}
-
-.about-img {
-  max-height: 400px;
-  margin-top: 30px;
-}
-
-@media (max-width: 768px) {
-  .about-text,
-  .about-img {
-      margin-top: 20px;
-      text-align: center;
-  }
-
-  .about-text {
-      padding-right: 0;
-  }
-}
-.cursor {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border: 3px solid #8329d9;
-  transition: all 200ms ease-out;
-  position: fixed;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-  transform: translate(calc(-50% + 15px), -50%);
-  z-index: 1000;
-}
-
-.cursor2 {
-  width: 20px; z-index: 1000;
-  height: 20px;
-  border-radius: 100%;
-  background-color: #ce2cda;
-  opacity: 1;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: width .3s, height .3s, opacity .3s;
-}
-
-.hover {
-  background-color: #ce2cda;
-  opacity: 0.5; z-index: 1000;
-}
-
-.cursorinnerhover {
-  width: 50px;
-  height: 50px;
-  opacity: .5; z-index: 1000;
-}
-
-.container11 .palette .color:hover {
-    cursor: pointer;
-}
-
-.about-section.hover-264653 {
-    background-color: #264653;
-}
-
-.about-section.hover-2A9D8F {
-    background-color: #2A9D8F;
-}
-
-.about-section.hover-E9C46A {
-    background-color: #E9C46A;
-}
-
-.about-section.hover-F4A261 {
-    background-color: #F4A261;
-}
-
-.about-section.hover-E76F51 {
-    background-color: #E76F51;
-}
-
-* {
-  cursor: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  width: 100%;
-  height: 100%;
-}
-
-
-
-
-.cursor {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border: 3px solid #8329d9;
-  transition: all 200ms ease-out;
-  position: fixed;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-  transform: translate(calc(-50% + 15px), -50%);
-  z-index: 1000;
-}
-
-.cursor2 {
-  width: 20px; z-index: 1000;
-  height: 20px;
-  border-radius: 100%;
-  background-color: #ce2cda;
-  opacity: 1;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: width .3s, height .3s, opacity .3s;
-}
-
-.hover {
-  background-color: #ce2cda;
-  opacity: 0.5; z-index: 1000;
-}
-
-.cursorinnerhover {
-  width: 50px;
-  height: 50px;
-  opacity: .5; z-index: 1000;
-}
-::selection {
-            background-color: #ce2cda; /* Yellow background */
-            color: #ffffff; /* Red text */
-        }
-
-        /* For older versions of Firefox */
-        ::-moz-selection {
-            background-color: #FFFF00;
-            color: #FF0000;
-        }
-
-
-        .google-logo {
-      max-width: 200px;
-      display: block;
-      margin: 0 auto;
-  }
-
-  .rating {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-
-  .rating i {
-      font-size: 24px;
-      color: gold;
-      margin: 0 5px;
-  }
-
-  .rating i:hover {
-      cursor: pointer;
-  }
-
-
-
-
-    </style>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
 </head>
@@ -661,7 +72,8 @@ body, html {
 
         <!-- Center Text -->
         <div class="col-md-4 d-flex align-items-center justify-content-center p-5 purple-gradient-bg increase-height">
-            <div class="text-center">
+        
+          <div class="text-center">
                 <h2>STELLXR</h2>
                 <p>We're not just in the business of technology; we're in the business of reimagining the future. Every invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our DNA."</p>
                 <a href="brand.html" class="btn btn-warning">Learn More</a>
@@ -674,7 +86,10 @@ body, html {
         </div>
     </div>
 </div>
-<br><br><br><br><br><section class="about-section" style="margin-top: -90px; border-bottom: 1px solid black; background-color: #f4f4f4;">
+
+<br><br><br><br>
+
+ <section class="about-section" style="margin-top: -90px;  background-color: #ffffff;">
   <div class="container">
       <div class="row align-items-center">
           <!-- About Text -->  
@@ -695,14 +110,17 @@ body, html {
                           </svg>
                       </div>
                   </div>
+                  
               </center>  
           </div>
+          
           <div class="col-lg-6 about-text">
+            
               <h2>Stellxrs Branding Service: Comprehensive Brand Identity Solutions </h2>
               <p style="font-size: 15px;">
                   Stellxrs Branding Service is a comprehensive solution for businesses looking to establish a strong and consistent brand identity. We offer a wide range of services including custom logo design, website development, app design, poster creation, and unique font selection. Our branding plans are tailored to meet the specific needs of each client, ensuring that their brand stands out in the market. With Stellxrs, businesses can create a cohesive and memorable brand presence across all platforms and mediums.
               </p>
-              <a href="a.html"><button type="button" class="btn btn-outline-dark">Learn more about us</button></a>
+              <a href="branding.html"><button type="button" class="btn btn-outline-dark">Learn more about us</button></a>
           </div>
       </div>
   </div>
@@ -710,7 +128,43 @@ body, html {
 
 
 
-    <section class="about-section" style="background-color: #000; color: #fff; padding: 50px 0;">
+
+
+
+
+
+
+
+
+<section class="about-section" style=" background-color:#ffffff; ">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- About Image -->
+            <div class="col-lg-6 order-lg-2">
+                <img src="Copy of Untitled Design.gif" 
+                     alt="Stellxr Web Development Company in Kannur, Kerala" 
+                     class="img-fluid fade-in" 
+                     title="Stellxr Web Development Company in Kannur, Kerala">
+            </div>
+  
+            <!-- About Text -->
+            <div class="col-lg-6 about-text order-lg-1" >
+                <div >
+                    <h2 class="mb-4">About Stellxr: Leading Web Development Company in Kannur, Kerala</h2>
+                   <b><p style="font-size: 15px; color: black;" >
+                        Stellxr is a leading web development company based in Kannur, Kerala, with over 20 years of industry experience and a portfolio boasting over 1000 successful projects. Specializing in custom website development, e-commerce solutions, PHP, Laravel, and WordPress development, we fuse creativity with advanced technology to create websites that are visually appealing and SEO-optimized. Committed to transforming businesses, we offer meticulously designed social media marketing campaigns to enhance your brand's online visibility and ranking.
+                    </p></b> 
+                    <a href="brand.html" class="btn btn-outline-dark mt-4">Learn more about us <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+  </section>
+
+
+    <br><br><section class="about-section" style="background-color: #000; color: #fff; padding: 50px 0;">
         <div class="container">
             <div class="row align-items-center">
                 
@@ -799,164 +253,7 @@ body, html {
     
     
     
-    <style>
-      .google-logo {
-          max-width: 200px;
-          display: block;
-          margin: 0 auto;
-      }
-    
-      .rating {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-    
-      .rating i {
-          font-size: 24px;
-          color: gold;
-          margin: 0 5px;
-      }
-    
-      .rating i:hover {
-          cursor: pointer;
-      }
-    </style>
-    <div class="container-fluid " style="background-color: white;">
-      <br><br>
-      <div class="row" >
-          <!-- Google Review -->
-          <div class="col-md-4 col-12 mb-3 text-center">
-              <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="google-logo">
-              <h2 class="mt-3">Google Review</h2>
-              <div class="rating mt-3">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-              </div>
-          </div>
-          
-          <!-- Just Dial Review -->
-          <div class="col-md-4 col-12 mb-3 text-center">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcI_TdIGltI0bRIlvpyCbodxnq-Ibct6IPy6sgQa65&s" alt="Just Dial Logo" class="justdial-logo" style="height: 55px;">
-              <h2 class="mt-3">Just Dial Review</h2>
-              <div class="rating mt-3">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-              </div>
-          </div>
-          
-          <!-- Apple Review -->
-          <div class="col-md-4 col-12 mb-3 text-center">
-              <img src="https://asset.brandfetch.io/idPOwEFBdW/idl_lgL5cu.png" alt="Apple Logo" class="apple-logo" style="height: 55px;">
-              <h2 class="mt-3">Bark Review</h2>
-              <div class="rating mt-3">
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-              </div>
-          </div>
-      </div>
-    </div>
-    
-</section>   
- <section class="about-section" style=" background-color:#ffffff; ">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- About Image -->
-            <div class="col-lg-6 order-lg-2">
-                <img src="Copy of Untitled Design.gif" 
-                     alt="Stellxr Web Development Company in Kannur, Kerala" 
-                     class="img-fluid fade-in" 
-                     title="Stellxr Web Development Company in Kannur, Kerala">
-            </div>
-
-            <!-- About Text -->
-            <div class="col-lg-6 about-text order-lg-1" >
-                <div >
-                    <h2 class="mb-4">About Stellxr: Leading Web Development Company in Kannur, Kerala</h2>
-                   <b><p style="font-size: 15px; color: black;" >
-                        Stellxr is a leading web development company based in Kannur, Kerala, with over 20 years of industry experience and a portfolio boasting over 1000 successful projects. Specializing in custom website development, e-commerce solutions, PHP, Laravel, and WordPress development, we fuse creativity with advanced technology to create websites that are visually appealing and SEO-optimized. Committed to transforming businesses, we offer meticulously designed social media marketing campaigns to enhance your brand's online visibility and ranking.
-                    </p></b> 
-                    <a href="brand.html" class="btn btn-outline-dark mt-4">Learn more about us <i class="fas fa-arrow-right ml-2"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
   
-</section>
-<div style="border-bottom: 1px solid black;">   <style>
-  /* Gradient Background */
-
-   
-    /* Contact Card Styling */
-    .contact-card {
-      border-radius: 10px;
-      background-color: #007bff; /* Blue background */
-      padding: 20px;
-      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .contact-card:hover {
-      transform: translateY(-5px); /* Move card up slightly on hover */
-      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
-    }
-    .contact-card i {
-      font-size: 3rem; /* Larger icon size */
-      color: #fff; /* White icon color */
-    }
-    .contact-card p {
-      font-size: 1.2rem; /* Larger text size */
-      color: #fff; /* White text color */
-    }
-</style>
-</head>
-<body>
-
-  <section id="contact-us" class="py-5" style="background-color: white;">
-    <div class="container">
-      <h2 class="text-center mb-4">Contact Us</h2>
-      <div class="row text-center">
-        <!-- Whatsapp -->
-        <div class="col-md-4  mb-4" >
-          <div class="contact-card">
-            <i class="fab fa-whatsapp mb-3"></i>
-            <p>+91 9037452346</p>
-          </div>
-        </div>
-        <!-- Instagram -->
-        <div class="col-md-4  mb-4">
-          <div class="contact-card">
-            <i class="fab fa-instagram mb-3"></i>
-            <p>@stellxr.in</p>
-          </div>
-        </div>
-        <!-- Email -->
-        <div class="col-md-4  mb-4">
-          <div class="contact-card">
-            <i class="far fa-envelope mb-3"></i>
-            <p>tech.stellxr@gmail.com</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Map Section -->
-  <div class="container-fluid p-0">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7812.935770394992!2d75.58534739999999!3d11.73205205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba429b71c934479%3A0xc46a74d3e672a5f1!2sAniyaram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1714107501588!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </div>
-  
-<!-- Map Section -->
-
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <footer style="background-color: black; color: white; text-align: center; padding: 20px 0;">

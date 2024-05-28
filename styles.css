@@ -720,8 +720,9 @@ color: #fff; /* White text color */
     width: 100%;
     padding-bottom: 100%; /* Makes the div a square */
     position: relative;
-    background-color: white;
-    border: 1px solid black;
+
+    border-radius: 6px;
+    box-shadow: black 1px;
 }
 .content1 {
     position: absolute;
@@ -729,7 +730,8 @@ color: #fff; /* White text color */
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color: white;
+    color: white;
+    
 }
 .icon {
     width: 50px; /* Adjust the size of the icons as needed */

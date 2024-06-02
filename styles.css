@@ -1029,3 +1029,82 @@ button {
                 min-width: 100%;
             }
         }
+
+        .collections {
+          background: var(--accent-2);
+          padding: 30px 0 20px;
+        }
+        
+        .collections h1 {
+          font-size: 35px;
+          margin-bottom: 33px;
+          text-align: center;
+        }
+        
+        .collections .cards {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin: 0 auto;
+          max-width: calc(var(--max-w) * 0.95);
+        }
+        
+        .collections .card {
+          margin: 0 20px;
+          flex: 0.35 1 300px;
+        }
+        
+        .collections .card:hover {
+          transform: translateY(-5px);
+        }
+        
+        .collections img {
+          height: 200px;
+          width: 100%;
+          border-radius: 5px;
+        }
+        
+        .collections .card:hover img {
+          box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+        }
+        
+        .collections .description {
+          background: white;
+          border-radius: 5px;
+          width: 255px;
+          margin: 0 auto;
+          transform: translateY(-45px);
+          text-align: center;
+          padding: 8px 12px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, .05);
+          transition: all 0.3s;
+        }
+        
+        .collections .card:hover .description {
+          transform: translateY(-60px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+        }
+        
+        .collections .tag-2 {
+          font-size: 14px;
+        }
+        
+        .collections h2 {
+          font-family: 'Playfair Display', serif;
+          font-weight: normal;
+          margin-top: -3px;
+        }
+
+
+
+
+        .section {
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          margin: 100px 0;
+      }
+      
+      .section.active {
+          opacity: 1;
+      }
+      

@@ -972,3 +972,60 @@ button {
   }
 }
 
+   .container2334 {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    .section342424 {
+            padding: 20px;
+            box-sizing: border-box;
+            flex: 1 1 50%; /* Flex-grow, flex-shrink, and flex-basis */
+            min-width: 300px; /* Ensures sections don't get too small */
+        }
+       .lef {
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+       .lef .contact-button {
+            background-color: #808080;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            width: fit-content;
+            cursor: pointer;
+        }
+       .righ-section {
+            background: linear-gradient(180deg, rgba(112, 71, 235, 1) 0%, rgba(63, 94, 251, 1) 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+       .righ-section .checklist {
+            list-style: none;
+            padding: 0;
+        }
+       .righ-section .checklist li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+       .righ-section .checklist li:before {
+            content: '✔';
+            margin-right: 10px;
+            color: #4CAF50;
+        }
+        @media (max-width: 768px) {
+          .container2334 {
+                flex-direction: column;
+            }
+        .section342424 {
+                min-width: 100%;
+            }
+        }

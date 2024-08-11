@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+         * {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other elements */
+  border-bottom: var(--border);
+  background-color: var(--white);
+}
+
+/* Adjust the container padding to prevent content overlap with the fixed navbar */
+body {
+  padding-top: 90px; /* Adjust this value if your navbar height changes */
+}
+
+/* Ensure the menu and dropdown are positioned correctly with the fixed navbar */
+.menu {
+  position: relative;
+  background: var(--white);
+}
+
+.dropdown {
+  position: absolute;
+  top: 56px; /* Adjust this value based on the height of your navbar */
+  left: 0;
+  min-width: 230px;
+  background-color: var(--white);
+  border-radius: 10px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.97) translateX(-5px);
+  transition: 0.1s ease-in-out;
+  box-shadow: var(--shadow);
+}
+
+.dropdown.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1) translateX(5px);
+}
+
+/* Additional media query adjustments for responsiveness if needed */
+@media (max-width: 1100px) {
+  .menu {
+    top: 87px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 120px; /* Adjust this value if your navbar height changes */
+  }
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <header id="nav-menu" aria-label="navigation bar"style="z-index: 10000;" >
+        <div class="container"style="z-index: 10000;">
+          <div class="nav-start"style="z-index: 10000;">
+            <a class="logo" href="/"style="z-index: 10000;">
+              <img src="logoreal.png" width="35" height="35" alt="Inc Logo" / style="z-index: 10000;">
+            </a>
+            <nav class="menu"style="z-index: 10000;">
+              <ul class="menu-bar"style="z-index: 10000;">
+                <li>
+                  <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false" aria-label="browse"style="z-index: 10000;">
+                    Browse
+                    <i class="bx bx-chevron-down" aria-hidden="true"style="z-index: 10000;"></i>
+                  </button>
+                  <div id="dropdown1" class="dropdown" style="z-index: 10000;">
+                    <ul role="menu">
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#best-of-the-day">
+                          <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/botd.svg" class="icon" / style="z-index: 10000;">
+                          <div>
+                            <span class="dropdown-link-title">Best of the day</span>
+                            <p>Shorts featured today by curators</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#featured-streams">
+                          <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/fs.svg" class="icon" / style="z-index: 10000;">
+                          <div>
+                            <span class="dropdown-link-title">Featured Streams</span>
+                            <p>Leading creatives livestreams</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#subscriptions">
+                          <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/sp.svg" class="icon" />
+                          <div>
+                            <span class="dropdown-link-title">Subscriptions</span>
+                            <p>Gain exclusive access</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#creative-feed">
+                          <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/cf.svg" class="icon" />
+                          <div>
+                            <span class="dropdown-link-title">Creative Feed</span>
+                            <p>See trending creations</p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+      
+                    <ul role="menu">
+                      <li class="dropdown-title">
+                        <span class="dropdown-link-title">Browse by apps</span>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#adobe-xd">
+                          <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/xd.svg" />
+                          Adobe XD
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#after-effect">
+                          <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/ae.svg" />
+                          After Effect
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#sketch">
+                          <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/sketch.svg" />
+                          Sketch
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#indesign">
+                          <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/indesign.svg" />
+                          Indesign
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#figma">
+                          <img src="https://raw.githubusercontent.com/Evavic44/responsive-navbar-with-dropdown/main/assets/icons/figma.svg" />
+                          Figma
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover" style="z-index: 10000;">
+                    Discover
+                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="dropdown2" class="dropdown" style="z-index: 10000;">
+                    <ul role="menu">
+                      <li>
+                        <span class="dropdown-link-title">Browse Categories</span>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#branding">Branding</a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#illustrations">Illustration</a>
+                      </li>
+                    </ul>
+                    <ul role="menu">
+                      <li>
+                        <span class="dropdown-link-title">Download App</span>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#mac-windows">MacOS & Windows</a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#linux">Linux</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a class="nav-link" href="/">Jobs</a></li>
+                <li><a class="nav-link" href="/">Livestream</a></li>
+                <li><a class="nav-link" href="/">About</a></li>
+              </ul>
+            </nav>
+          </div>
+      
+          <div class="nav-end" style="z-index: 1000;">
+            <div class="right-container">
+              <form class="search" role="search">
+                <input type="search" name="search" placeholder="Search" />
+                <i class="bx bx-search" aria-hidden="true"></i>
+              </form>
+              <a href="#profile">
+                <img src="https://github.com/Evavic44/responsive-navbar-with-dropdown/blob/main/assets/images/user.jpg?raw=true" width="30" height="30" alt="user image" />
+              </a>
+              <button class="btn btn-primary">Create</button>
+            </div>
+      
+            <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false" style="z-index: 10000;">
+              <i class="bx bx-menu" aria-hidden="true" style="z-index: 10000;"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+      <section class="hero-section"style="z-index: 900;">
+        <div class="hero-content">
+            <h1 class="hero-title" style="font-size: 2.5rem;  font-family: Poppins, sans-serif;
+            font-weight: 400;
+            font-style: normal; ">Welcome to Stellxr</h1>
+            <p class="hero-subtitle" style="max-width: 600px; font-size: 1.5rem;">
+                 "We're in the business of reimagining the future. Every
+                invention is a step towards a brighter, more innovative world. Innovation is not just our mission; it's our
+                DNA."
+            </p>
+           <a href="https://api.whatsapp.com/send/?phone=919037452346&text&type=phone_number&app_absent=0"> <button class="hero-button">Get Started Now</button></a>
+        </div>
+      </section>
+      <div class="unique2-container">
+        <div class="unique2-image-section">
+            <img src="https://localowl.digital/wp-content/uploads/2024/03/website-service-honor-1024x1024.jpg" alt="McD's x Crocs">
+        </div>
+        <div class="unique2-text-section">
+            <h1>Enterpreneurs' Week: Unlock 50% Off on Web Development & Branding Services!</h1>
+            <p>Celebrate Enterpreneurs' Week with our exclusive offer! For a limited time, enjoy a massive 50% discount on all web development and branding services at our agency. Whether you’re launching a new business or rebranding an existing one, our team is here to help you stand out. Don't miss out on this chance to elevate your online presence and drive success</p>
+            <p>Contact us today to claim your discount and transform your vision into reality!
+
+
+
+
+
+
+            </p>
+            <button class="unique2-button">I want to learn more..</button>
+        </div>
+    </div>
+      <div class="stellxr-wrapper">
+        <h2 class="stellxr-heading">Events</h2>
+        <div class="stellxr-container">
+            <div class="stellxr-card">
+                <img src="events/Untitled design (19).png" alt="Surface for Business">
+                <div class="stellxr-card-content">
+                    <h3 class="stellxr-card-title" style=" font-size: 1.8em;
+  margin-bottom: 10px;">Brand Makeover Contest</h3>
+                    <p>Submit your current branding for a chance to win a complete brand overhaul, including a new logo, website, and marketing strategy.</p>
+                    <br>
+                    <a href="#">Shop now</a>
+                </div>
+            </div>
+            <div class="stellxr-card">
+                <img src="events/Untitled design (18).png" alt="Copilot for Microsoft 365">
+                <div class="stellxr-card-content">
+                    <h3 style=" font-size: 1.8em;
+  margin-bottom: 10px;">Tech Trends Week</h3>
+                    <p>Explore the latest web development technologies with special rates and daily webinars on cutting-edge tech trends.</p>
+                    <br>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            <div class="stellxr-card">
+                <img src="events/Untitled design (20).png" alt="Join the era of AI">
+                <div class="stellxr-card-content">
+                    <h3 style=" font-size: 1.8em;
+  margin-bottom: 10px;">Creative Kickoff Week</h3>
+                    <p>Access discounts on branding services and join workshops with experts to boost your brand’s visual identity.</p>
+                    <br>
+                    <a href="#">Explore AI solutions</a>
+                </div>
+            </div>
+            <div class="stellxr-card">
+                <img src="events/Untitled design (21).png" alt="Visual Studio 2022">
+                <div class="stellxr-card-content">
+                    <h3 style=" font-size: 1.8em;
+  margin-bottom: 10px;">Growth Strategy Month</h3>
+                    <p>Get discounted consultations and attend events focused on effective business growth strategies and networking opportunities.
+                    </p>
+                    <br>
+                    <a href="#">Download Visual Studio 2022</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  <center><h1>Explore the Extraordinary: <br> Our Services Await</h1></center>
+    <!-- Service Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="services">
+      <div class="w3-quarter service-box">
+        <img src="Untitled design (2).png" alt="Branding Solutions">
+        <h3>BRANDING </h3>
+        <p>Rebranding for institutions and companies</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div class="w3-quarter service-box">
+        <img src="Untitled design (3).png" alt="Freelancing">
+        <h3>FREELANCING</h3>
+        <p>Posters, Logo Designing and Graphic Designing</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div class="w3-quarter service-box">
+        <img src="Untitled design (1).png" alt="Web Designing">
+        <h3>WEB DESIGNING</h3>
+        <p> Next level websites with hosting and domain plans</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div class="w3-quarter service-box">
+        <img src="image 9.png" alt="Star Labs">
+        <h3>STAR LABS</h3>
+        <p>Creative workshop of Stellxr where we work on new projects</p>
+        <a href="#">Learn more</a>
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<br><br><br>
+ 
+<div class="iphone-section">
+    <div class="content">
+        <h1>Aashan</h1>
+        <p>Something to change the way schools are</p>
+        <div class="buttons">
+            <a href="#" class="btn learn-more">Learn more</a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="containerfer">
+    <div class="sectionfer">
+        <img src="https://cdn.pixabay.com/photo/2011/12/14/12/11/astronaut-11080_1280.jpg" alt="Fashion Image">
+        <div class="overlayfer">
+            <h2>Star Labs</h2>
+            <p>WE CREATE THE FUTURE HERE<br>THIS IS OUR RESERCH LAB</p>
+            <a href="#">Explore</a>
+        </div>
+    </div>
+    <div class="sectionfer">
+        <img src="https://cdn.pixabay.com/photo/2020/01/29/20/24/building-4803602_960_720.jpg" alt="Car Image">
+        <div class="overlayfer">
+            <h2>Magazine</h2>
+            <p>GET LATEST UPDATES ABOUT OUR COMPANY AND MORE</p>
+            <a href="#">Discover More</a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<br><br>
+<div class="unique-container">
+    <div class="unique-image-section">
+        <img src="Untitled design/Untitled design (13).png" alt="McD's x Crocs">
+    </div>
+    <div class="unique-text-section">
+        <h1>About stellxr</h1>
+        <p>At Stellxr, we specialize in creating stunning websites and powerful branding solutions that captivate and engage. Our team of experts is dedicated to turning your vision into a digital masterpiece, ensuring your business stands out in a crowded market.</p>
+        <p> Experience the perfect blend of creativity and technology with Stellxr.
+
+
+
+
+
+
+        </p>
+        <button class="unique-button">I want to learn more..</button>
+    </div>
+</div>
+<section class="curations">
+  <h2>OUR SUB COMPANIES</h2>
+  <div class="curations-container">
+      <div class="curation-item">
+          <img src="https://stellxr.000webhostapp.com/WhatsApp%20Image%202023-06-24%20at%203.14.49%20PM%20(1).jpeg" alt="Bestseller">
+          <p>Aashan</p>
+      </div>
+      <div class="curation-item">
+          <img src="https://stellxr.000webhostapp.com/niii.jpg" alt="Drinks">
+          <p>easycode</p>
+      </div>
+      <div class="curation-item">
+          <img src="https://stellxr.000webhostapp.com/arther2.jpg" alt="Food">
+          <p>Arthur</p>
+      </div>
+      <div class="curation-item">
+          <img src="https://stellxr.000webhostapp.com/pixeloutfitter.jpg" alt="Merchandise">
+          <p>Pixeloutiftter</p>
+      </div>
+    
+  </div>
+</section>
+
+<div class="footer">
+  <img src="logo.png" alt="Logo" class="footer-logo">
+
+</div>
+      <!-- Page markup: Not important -->
+
+      <script>const dropdownBtn = document.querySelectorAll(".dropdown-btn");
+        const dropdown = document.querySelectorAll(".dropdown");
+        const hamburgerBtn = document.getElementById("hamburger");
+        const navMenu = document.querySelector(".menu");
+        const links = document.querySelectorAll(".dropdown a");
+        
+        function setAriaExpandedFalse() {
+          dropdownBtn.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
+        }
+        
+        function closeDropdownMenu() {
+          dropdown.forEach((drop) => {
+            drop.classList.remove("active");
+            drop.addEventListener("click", (e) => e.stopPropagation());
+          });
+        }
+        
+        function toggleHamburger() {
+          navMenu.classList.toggle("show");
+        }
+        
+        dropdownBtn.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            const dropdownIndex = e.currentTarget.dataset.dropdown;
+            const dropdownElement = document.getElementById(dropdownIndex);
+        
+            dropdownElement.classList.toggle("active");
+            dropdown.forEach((drop) => {
+              if (drop.id !== btn.dataset["dropdown"]) {
+                drop.classList.remove("active");
+              }
+            });
+            e.stopPropagation();
+            btn.setAttribute(
+              "aria-expanded",
+              btn.getAttribute("aria-expanded") === "false" ? "true" : "false"
+            );
+          });
+        });
+        
+        // close dropdown menu when the dropdown links are clicked
+        links.forEach((link) =>
+          link.addEventListener("click", () => {
+            closeDropdownMenu();
+            setAriaExpandedFalse();
+            toggleHamburger();
+          })
+        );
+        
+        // close dropdown menu when you click on the document body
+        document.documentElement.addEventListener("click", () => {
+          closeDropdownMenu();
+          setAriaExpandedFalse();
+        });
+        
+        // close dropdown when the escape key is pressed
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            closeDropdownMenu();
+            setAriaExpandedFalse();
+          }
+        });
+        
+        // toggle hamburger menu
+        hamburgerBtn.addEventListener("click", toggleHamburger);
+        </script>
+</body>
+</html>
